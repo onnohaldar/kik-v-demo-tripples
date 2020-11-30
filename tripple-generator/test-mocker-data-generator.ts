@@ -3,11 +3,12 @@
  * File: test-mocker-data-generator.ts
  * 
  * Typescript version of mocker test
- * 
+ * See <https://www.npmjs.com/package/mocker-data-generator>
  * 
  */
 
 import mocker from 'mocker-data-generator';
+import { inspect } from 'util';
 
 const user = {
     firstName: {
@@ -58,3 +59,10 @@ const conditionalField = {
     }
 }
 
+const data = mocker()
+    .schema('user', user, 2)
+    .schema('group', group, 2)
+    .schema('conditionalField', conditionalField, 2)
+    .buildSync()
+ 
+console.log(inspect(data, { depth: 10 }))
