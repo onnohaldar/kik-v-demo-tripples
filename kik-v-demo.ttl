@@ -1,0 +1,153 @@
+#################################################################
+# File: kik-v-testdata.ttl
+# Author: Onno Haldar
+# Date: 12-11-2020
+# Status: Initial instances KIK-V Demo Triplestore   
+#################################################################
+
+@prefix : <http://testdata.zinl.nl/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix kikv: <http://www.zinl.nl/ontologies/KIK-V#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vph: <http://www.zinl.nl/ontologies/VPH-domain-ontology#> .
+@base <http://testdata.zinl.nl/> .
+
+<http://testdata.zinl.nl/> a owl:Ontology ;
+                            owl:imports kikv: .
+
+#################################################################
+#  Classes
+#################################################################
+
+###  http://www.zinl.nl/ontologies/kikv#ZorgverlenerFunctie
+kikv:ZorgverlenerFunctie skos:definition """Een functie volgens een werkovereenkomst die beschouwd kan worden als een zorgverlenende functie.
+Zolang definities hiervoor ontbreken blijft onduidelijkheid bestaan over hoe dit concept geinstantieerd moet worden."""@nl .
+
+#################################################################
+# Zorgverlenersrollen
+#
+# Node: vph:HealthcareProfessionRole 
+#
+# Bevindingen:
+# - Wordt nog nergens gebruikt?
+#################################################################
+
+#################################################################
+# Node: zorgverlenerrol1
+#################################################################
+:zorgverlenerrol1 a vph:HealthcareProfessionRole .
+
+#################################################################
+# Personen met een arbeidsovereenkomst
+#
+# Node: vph:Human 
+#       -> kikv:hasAgreement
+#           -> kikv:hasDescription
+#              -> kikv:GewerktePeriode                       |
+#              -> kikv:ContractOmvang                 +
+#              -> kikv:Functie
+#
+# Bevindingen:
+# - Functie en/of Rol Manager?
+#################################################################
+
+#################################################################
+# Node: persoon1
+#################################################################
+:persoon1 a vph:Human ;
+    kikv:hasAgreement :arbeidsovereenkomst1 .
+
+:arbeidsovereenkomst1 a kikv:ArbeidsOvereenkomst ;
+    kikv:hasDescription
+        :gewerkteperiode1,
+        :gewerkteperiode2,
+        :gewerkteperiode3,
+        :manager_functie1,
+        :verpleging_functie_1 ;
+    kikv:startDatum "2018-01-01"^^xsd:date .
+
+:gewerkteperiode1 a kikv:GewerktePeriode ;
+    kikv:startDatum "2018-01-01"^^xsd:date ;
+    kikv:eindDatum "2018-01-31"^^xsd:date ;
+    kikv:gewerkteUren 200 .
+    
+:gewerkteperiode2 a kikv:GewerktePeriode ;
+    kikv:startDatum "2018-04-01"^^xsd:date ;
+    kikv:eindDatum "2018-07-31"^^xsd:date ;
+    kikv:gewerkteUren 1000 .
+                  
+:gewerkteperiode3 a kikv:GewerktePeriode ;
+    kikv:eindDatum "2018-11-30"^^xsd:date ;
+    kikv:gewerkteUren 20 .
+
+:manager_functie1 a kikv:Functie ;
+    kikv:startDatum "2018-07-01"^^xsd:date .
+
+:verpleging_functie_1 a kikv:ZorgverlenerFunctie ;
+    kikv:startDatum "2018-01-01"^^xsd:date ;
+    kikv:eindDatum "2018-06-30"^^xsd:date .
+
+#################################################################    
+# Node: persoon2
+#################################################################
+:persoon2 a vph:Human ;
+    kikv:hasAgreement :aok_bepaaldetijd1 .
+
+:aok_bepaaldetijd1 a kikv:ArbeidsOvereenkomstBepaaldeTijd ;
+    kikv:hasDescription :omvang1 ;
+    kikv:startDatum "2017-01-01"^^xsd:date ;
+    kikv:eindDatum "2017-12-31"^^xsd:date .
+
+:omvang1 a kikv:ContractOmvang .
+
+#################################################################
+# Node: persoon3
+#################################################################
+:persoon3 a vph:Human ;
+    kikv:hasAgreement :aok_onbepaaldetijd1 .
+
+:aok_onbepaaldetijd1 a kikv:ArbeidsOvereenkomstOnbepaaldeTijd ;
+    kikv:hasDescription
+        :omvang2,
+        :omvang3 ;
+    kikv:startDatum "2017-08-01"^^xsd:date .
+
+:omvang2 a kikv:ContractOmvang ;
+    kikv:startDatum "2017-08-01"^^xsd:date ;
+    kikv:eindDatum "2017-12-31"^^xsd:date ;
+    kikv:parttimeFactor 0.8 .
+
+:omvang3 a kikv:ContractOmvang ;
+    kikv:startDatum "2018-01-01"^^xsd:date .
+
+#################################################################
+# Inhuurovereenkomsten
+#
+# Node: kikv:InhuurOvereenkomst 
+#       -> kikv:hasAgreement
+#           -> kikv:hasDescription
+#              -> kikv:GewerktePeriode                     |
+#              ->                  +
+#              -> 
+#
+# Bevindingen:
+# - 
+#################################################################
+
+#################################################################
+# Node: inhuurovereenkomst1
+#################################################################
+:inhuurovereenkomst1 a kikv:InhuurOvereenkomst ;
+    kikv:hasDescription :gewerkteperiode4 .
+
+:gewerkteperiode4 a kikv:GewerktePeriode ;
+kikv:startDatum "2018-02-01"^^xsd:date ;
+    kikv:eindDatum "2018-02-28"^^xsd:date ;
+    kikv:gewerkteUren 45 .
