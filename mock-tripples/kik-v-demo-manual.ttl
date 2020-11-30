@@ -1,5 +1,5 @@
 #################################################################
-# File: kik-v-testdata.ttl
+# File: kik-v-demo-tripples.ttl
 # Author: Onno Haldar
 # Date: 12-11-2020
 # Status: Initial instances KIK-V Demo Triplestore   
