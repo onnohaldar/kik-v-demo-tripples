@@ -1,2 +1,2 @@
 # kik-v-demo-tripples
-KIK-V Demo Tripples to demo voorbeeldberekeningen
+KIK-V tripples to demo voorbeeldberekeningen
