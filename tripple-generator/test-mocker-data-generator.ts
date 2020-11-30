@@ -21,13 +21,13 @@ const user = {
         faker: 'address.country'
     },
     createdAt: {
-        faker: 'date.past'
+        faker: 'date.past(2)' // past(2) means 2 years in the past
     },
     username: {
         function: function() {
             return (
-                this.object.lastName.substring(0, 5) +
-                this.object.firstName.substring(0, 3) +
+                this.object.lastName.substring(0, 2) +
+                this.object.firstName.substring(0, 2) +
                 Math.floor(Math.random() * 10)
             )
         }
@@ -60,8 +60,8 @@ const conditionalField = {
 }
 
 const data = mocker()
-    .schema('user', user, 2)
-    .schema('group', group, 2)
+    .schema('user', user, 4)
+    .schema('group', group, 4)
     .schema('conditionalField', conditionalField, 2)
     .buildSync()
  
