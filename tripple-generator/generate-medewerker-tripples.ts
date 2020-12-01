@@ -68,6 +68,6 @@ export function generateMedewerkerTripples(): any {
     };
 
     return mocker()
-        .schema('medewerker', medewerker, 4)
+        .schema('medewerker', medewerker, 10)
         .buildSync();
 }
