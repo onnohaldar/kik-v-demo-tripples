@@ -35,8 +35,11 @@ import mocker from 'mocker-data-generator';
 
 export function generateMedewerkerTripples(): any {
     const medewerker = {
-        medewerkerId: {
+        nodeId: {
             faker: 'random.uuid'
+        },
+        rdf_type: {
+            static: 'vph:Human'
         },
         kik_hasAgreement: {
             values: [
