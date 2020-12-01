@@ -33,7 +33,7 @@
  
 import mocker from 'mocker-data-generator';
 
-export function generateMedewerkerTripples(): any {
+export function generateMedewerkerTripples(numberToGenerate: number): any {
     const medewerker = {
         nodeId: {
             faker: 'random.uuid'
@@ -92,6 +92,6 @@ export function generateMedewerkerTripples(): any {
     };
 
     return mocker()
-        .schema('medewerker', medewerker, 10)
+        .schema('medewerker', medewerker, numberToGenerate)
         .buildSync();
 }

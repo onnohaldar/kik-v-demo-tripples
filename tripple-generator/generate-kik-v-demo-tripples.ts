@@ -10,7 +10,7 @@ import { inspect } from 'util';
 
 import { generateMedewerkerTripples } from './generate-medewerker-tripples';
 
-const zzpers = generateMedewerkerTripples();
+const medewerkers = generateMedewerkerTripples(10);
 
-console.log(inspect(zzpers, { depth: 10 }));
+console.log(inspect(medewerkers, { depth: 10 }));
 
