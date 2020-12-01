@@ -58,7 +58,7 @@ export function generateMedewerkerTripples(): any {
         'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstBepaaldeTijd",vph_hasRole': {
             static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstOnbepaaldeTijd",vph:hasRole': {
+        'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstOnbepaaldeTijd",vph_hasRole': {
             static: 'vph:Employee'
         }
 
