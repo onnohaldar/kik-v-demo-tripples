@@ -52,7 +52,8 @@ export function generateMedewerkerTripples(): any {
                 'kik:OproepcontractMetVoorovereenkomst',
                 'kik:StageOvereenkomst',
                 'kik:Uitzendovereenkomst',
-                'kik:PayrollOvereenkomst'              
+                'kik:PayrollOvereenkomst',
+                'kik:VrijwilligersOvereenkomst'            
             ]
         },
         'object.kik_hasAgreement=="kik:InhuurOvereenkomst",vph_hasRole': {
@@ -69,8 +70,16 @@ export function generateMedewerkerTripples(): any {
         },
         'object.kik_hasAgreement=="kik:StageOvereenkomst",vph_hasRole': {
             static: 'vph:Trainee'
+        },
+        'object.kik_hasAgreement=="kik:Uitzendovereenkomst",vph_hasRole': {
+            static: 'vph:Employee'
+        },
+        'object.kik_hasAgreement=="kik:PayrollOvereenkomst",vph_hasRole': {
+            static: 'vph:Employee'
+        },
+        'object.kik_hasAgreement=="kik:VrijwilligersOvereenkomst",vph_hasRole': {
+            static: 'vph:Volunteer'
         }
-
     };
 
     return mocker()
