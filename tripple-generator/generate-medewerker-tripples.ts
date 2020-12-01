@@ -38,7 +38,7 @@ export function generateMedewerkerTripples(): any {
         medewerkerId: {
             faker: 'random.uuid'
         },
-        werkOvereenkomst: {
+        kik_hasAgreement: {
             values: [
                 'InhuurOvereenkomst',
                 'ArbeidsOvereenkomstBepaaldeTijd',
@@ -52,14 +52,14 @@ export function generateMedewerkerTripples(): any {
                 
             ]
         },
-        'object.werkOvereenkomst=="InhuurOvereenkomst",hasRole': {
+        'object.kik_hasAgreement=="InhuurOvereenkomst",hasRole': {
             static: 'ZZPer'
         },
-        'object.werkOvereenkomst=="ArbeidsOvereenkomstBepaaldeTijd",hasRole': {
-            static: 'werknemer'
+        'object.kik_hasAgreement=="ArbeidsOvereenkomstBepaaldeTijd",hasRole': {
+            static: 'Werknemer'
         },
-        'object.werkOvereenkomst=="ArbeidsOvereenkomstOnbepaaldeTijd",hasRole': {
-            static: 'werknemer'
+        'object.kik_hasAgreement=="ArbeidsOvereenkomstOnbepaaldeTijd",hasRole': {
+            static: 'Werknemer'
         }
 
     };
