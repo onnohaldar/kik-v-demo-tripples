@@ -11,6 +11,12 @@ import mocker from 'mocker-data-generator';
 import { inspect } from 'util';
 
 const user = {
+    testAlfNr: {
+        faker: 'random.uuid'
+    },
+    testValues: {
+        values: ['value1', 'value2']
+    },
     firstName: {
         faker: 'name.firstName'
     },
