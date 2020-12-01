@@ -36,14 +36,17 @@ import { inspect } from 'util';
 
 export function generateMedewerkerTripples(): any {
     const medewerker = {
-        nodeId: {
+        medewerkerId: {
             faker: 'random.uuid'
         },
-        werkovereenkomst: {
+        werkOvereenkomst: {
             values: [
-                'kik:PersoneelInLoondienst',
-                'kik:PersoneelNietInLoondienst',
-                '-'
+                'InhuurOvereenkomst',
+                'ArbeidsOvereenkomstBepaaldeTijd',
+                'ArbeidsOvereenkomstBBL',
+                'OproepOvereenkomst',
+                'MinMaxContract',
+                'OproepcontractMetVoorovereenkomst'
             ]
         },
         'object.groep=="kik:PersoneelInLoondienst",werkovereenkomst': {
