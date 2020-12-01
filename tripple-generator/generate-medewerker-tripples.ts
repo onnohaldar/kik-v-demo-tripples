@@ -39,7 +39,7 @@ export function generateMedewerkerTripples(): any {
         nodeId: {
             faker: 'random.uuid'
         },
-        groep: {
+        werkovereenkomst: {
             values: [
                 'kik:PersoneelInLoondienst',
                 'kik:PersoneelNietInLoondienst',
