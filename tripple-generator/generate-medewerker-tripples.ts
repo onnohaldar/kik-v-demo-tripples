@@ -51,8 +51,7 @@ export function generateMedewerkerTripples(): any {
                 'kik:NulUrenContract',
                 'kik:OproepcontractMetVoorovereenkomst',
                 'kik:Uitzendovereenkomst',
-                'kik:PayrollOvereenkomst'
-                
+                'kik:PayrollOvereenkomst'              
             ]
         },
         'object.kik_hasAgreement=="kik:InhuurOvereenkomst",vph_hasRole': {
@@ -60,6 +59,9 @@ export function generateMedewerkerTripples(): any {
         },
         'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstBepaaldeTijd",vph_hasRole': {
             static: 'vph:Employee'
+        },
+        'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstBBL",vph_hasRole': {
+            static: 'vph:Apprentice'
         },
         'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstOnbepaaldeTijd",vph_hasRole': {
             static: 'vph:Employee'
