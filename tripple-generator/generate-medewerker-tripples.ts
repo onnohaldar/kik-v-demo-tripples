@@ -50,6 +50,7 @@ export function generateMedewerkerTripples(): any {
                 'kik:MinMaxContract',
                 'kik:NulUrenContract',
                 'kik:OproepcontractMetVoorovereenkomst',
+                'kik:StageOvereenkomst',
                 'kik:Uitzendovereenkomst',
                 'kik:PayrollOvereenkomst'              
             ]
@@ -65,6 +66,9 @@ export function generateMedewerkerTripples(): any {
         },
         'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstOnbepaaldeTijd",vph_hasRole': {
             static: 'vph:Employee'
+        },
+        'object.kik_hasAgreement=="kik:StageOvereenkomst",vph_hasRole': {
+            static: 'vph:Trainee'
         }
 
     };
