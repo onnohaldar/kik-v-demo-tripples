@@ -40,26 +40,26 @@ export function generateMedewerkerTripples(): any {
         },
         kik_hasAgreement: {
             values: [
-                'InhuurOvereenkomst',
-                'ArbeidsOvereenkomstBepaaldeTijd',
-                'ArbeidsOvereenkomstBBL',
-                'ArbeidsOvereenkomstOnbepaaldeTijd',
-                'MinMaxContract',
-                'NulUrenContract',
-                'OproepcontractMetVoorovereenkomst',
-                'Uitzendovereenkomst',
-                'PayrollOvereenkomst'
+                'kik:InhuurOvereenkomst',
+                'kik:ArbeidsOvereenkomstBepaaldeTijd',
+                'kik:ArbeidsOvereenkomstBBL',
+                'kik:ArbeidsOvereenkomstOnbepaaldeTijd',
+                'kik:MinMaxContract',
+                'kik:NulUrenContract',
+                'kik:OproepcontractMetVoorovereenkomst',
+                'kik:Uitzendovereenkomst',
+                'kik:PayrollOvereenkomst'
                 
             ]
         },
-        'object.kik_hasAgreement=="InhuurOvereenkomst",hasRole': {
-            static: 'ZZPer'
+        'object.kik_hasAgreement=="kik:InhuurOvereenkomst",vph_hasRole': {
+            static: 'vph:Freelancer'
         },
-        'object.kik_hasAgreement=="ArbeidsOvereenkomstBepaaldeTijd",hasRole': {
-            static: 'Werknemer'
+        'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstBepaaldeTijd",vph_hasRole': {
+            static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="ArbeidsOvereenkomstOnbepaaldeTijd",hasRole': {
-            static: 'Werknemer'
+        'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstOnbepaaldeTijd",vph:hasRole': {
+            static: 'vph:Employee'
         }
 
     };
