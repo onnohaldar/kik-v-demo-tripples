@@ -68,6 +68,15 @@ export function generateMedewerkerTripples(): any {
         'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstOnbepaaldeTijd",vph_hasRole': {
             static: 'vph:Employee'
         },
+        'object.kik_hasAgreement=="kik:MinMaxContract",vph_hasRole': {
+            static: 'vph:Employee'
+        },
+        'object.kik_hasAgreement=="kik:NulUrenContract",vph_hasRole': {
+            static: 'vph:Employee'
+        },
+        'object.kik_hasAgreement=="kik:OproepcontractMetVoorovereenkomst",vph_hasRole': {
+            static: 'vph:Employee'
+        },
         'object.kik_hasAgreement=="kik:StageOvereenkomst",vph_hasRole': {
             static: 'vph:Trainee'
         },
