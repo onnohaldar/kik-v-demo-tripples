@@ -55,9 +55,13 @@ export function generateMedewerkerTripples(): any {
         'object.werkOvereenkomst=="InhuurOvereenkomst",hasRole': {
             static: 'ZZPer'
         },
-        'object.werkOvereenkomst=="ArbeidsOvereenkomstBepaaldeTijd"||object.werkOvereenkomst=="ArbeidsOvereenkomstOnbepaaldeTijd",hasRole': {
+        'object.werkOvereenkomst=="ArbeidsOvereenkomstBepaaldeTijd",hasRole': {
+            static: 'werknemer'
+        },
+        'object.werkOvereenkomst=="ArbeidsOvereenkomstOnbepaaldeTijd",hasRole': {
             static: 'werknemer'
         }
+
     };
 
     return mocker()
