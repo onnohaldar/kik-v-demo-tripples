@@ -32,7 +32,6 @@
  */
  
 import mocker from 'mocker-data-generator';
-import { inspect } from 'util';
 
 export function generateMedewerkerTripples(): any {
     const medewerker = {
@@ -44,20 +43,24 @@ export function generateMedewerkerTripples(): any {
                 'InhuurOvereenkomst',
                 'ArbeidsOvereenkomstBepaaldeTijd',
                 'ArbeidsOvereenkomstBBL',
-                'OproepOvereenkomst',
+                'ArbeidsOvereenkomstOnbepaaldeTijd',
                 'MinMaxContract',
-                'OproepcontractMetVoorovereenkomst'
+                'NulUrenContract',
+                'OproepcontractMetVoorovereenkomst',
+                'Uitzendovereenkomst',
+                'PayrollOvereenkomst'
+                
             ]
         },
-        'object.groep=="kik:PersoneelInLoondienst",werkovereenkomst': {
-            values: ['']
+        'object.werkOvereenkomst=="InhuurOvereenkomst",hasRole': {
+            static: 'ZZPer'
         },
-        'object.groep=="kik:PersoneelNietInLoondienst",speed': {
-            faker: 'random.number'
+        'object.werkOvereenkomst=="ArbeidsOvereenkomstBepaaldeTijd"||object.werkOvereenkomst=="ArbeidsOvereenkomstOnbepaaldeTijd",hasRole': {
+            static: 'werknemer'
         }
     };
 
     return mocker()
-        .schema('kikPersoneel', kikPersoneel, 4)
+        .schema('medewerker', medewerker, 4)
         .buildSync();
 }
