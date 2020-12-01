@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "ts-node -P ./tsconfig.json tripple-generator/test-mocker-data-generator.ts",
-    "start": "ts-node -P ./tsconfig.json tripple-generator/kik-v-generator.ts"
+    "start": "ts-node -P ./tsconfig.json tripple-generator/generate-kik-v-demo-tripples.ts"
   },
   "repository": {
     "type": "git",

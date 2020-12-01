@@ -10,19 +10,17 @@
 import mocker from 'mocker-data-generator';
 import { inspect } from 'util';
 
-export function generateZZPerTripples(): any {
+export function generateMedewerkerTripples(): any {
     const kikPersoneel = {
         nodeId: {
             faker: 'random.uuid'
         },
-        nodeValues: [ 
-            {
-                static: {
-                    predicate: 'a',
-                    object: 'vph:Human'
-                }
-            }
-        ]
+        personeelType: {
+            values: [
+                'kik:PersoneelInLoondienst',
+                'kik:PersoneelNietInLoondienst'
+            ]
+        }
     };
 
     return mocker()
