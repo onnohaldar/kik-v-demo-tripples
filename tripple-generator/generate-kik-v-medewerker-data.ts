@@ -24,12 +24,12 @@
  * │   ├── kik:NulUrenContract                         │                        |
  * │   └── kik:OproepcontractMetVoorovereenkomst       │                        |
  * │                                                   │                        |
- * ├── kik:StageOvereenkomst                           ├── vph:Trainee          ├─ (no membership defined)
+ * ├── kik:StageOvereenkomst                           ├── vph:Trainee          ├─ (membership is undefined)
  * │                                                   │                        |
  * ├── kik:Uitzendovereenkomst                         ├── vph:Employee         ├─ kik:PersoneelNietInLoondienst
  * │   └── kik:PayrollOvereenkomst                     │                        |
  * │                                                   │                        |
- * └── kik:VrijwilligersOvereenkomst                   └── vph:Volunteer        └- (no membership defined)
+ * └── kik:VrijwilligersOvereenkomst                   └── vph:Volunteer        └- (membership is undefined)
  * 
  */
  
