@@ -10,7 +10,7 @@
  * Soort overeenkomst                                  Bijbehorende rol         Groep
  * ------------------------------------------------------------------------------------------------------------
  * 
- * kik_WerkOvereenkomst                                vph_hasRole              kik_hasMember   
+ * kik_hasAgreement                                    vph_hasRole              kik_hasMember   
  * │                                                   │                        |
  * ├── kik:InhuurOvereenkomst                          ├── vph:Freelancer       ├─ kik:PersoneelNietInLoondienst
  * │                                                   │                        |
