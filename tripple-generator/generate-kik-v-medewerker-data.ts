@@ -105,7 +105,7 @@ export function generateMedewerkerData(
 
                 switch (this.object.kik_hasAgreement) {
                     case 'kik:ArbeidsOvereenkomstOnbepaaldeTijd':
-                        // Overeenkomsten van onbepaalde tijd zijn al beeindigt of momenteel nog niet beeindigt
+                        // Overeenkomsten met onbepaalde tijd zijn al beeindigt of momenteel nog niet beeindigt
                         if (this.faker.random.boolean) {
                             eindDatum = this.faker.date.between(this.object.kik_hasAgreement_startDatum, new Date().toISOString());
                         }
