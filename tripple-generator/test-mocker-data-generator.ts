@@ -11,6 +11,9 @@ import mocker from 'mocker-data-generator';
 import { inspect } from 'util';
 
 const user = {
+    testBoolean: {
+        faker: 'random.boolean'
+    },
     testAlfNr: {
         faker: 'random.number'
     },
