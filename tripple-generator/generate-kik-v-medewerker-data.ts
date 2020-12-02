@@ -19,10 +19,10 @@
  * │   │   └── kik:ArbeidsOvereenkomstBBL              │   └── Leerling-Werknemer
  * │   └── kik:ArbeidsOvereenkomstOnbepaaldeTijd       │
  * │                                                   │
- * ├── Oproepovereenkomst                              ├── Werknemer               Personeel in loondienst
- * │   ├── Min-max contract                            │
- * │   ├── Nuluren contract                            │
- * │   └── Oproepovereenkomst met voorovereenkomst     │
+ * ├── kik:OproepOvereenkomst                          ├── vph:Employee               Personeel in loondienst
+ * │   ├── kik:MinMaxContract                          │
+ * │   ├── kik:NulUrenContract                         │
+ * │   └── kik:OproepcontractMetVoorovereenkomst       │
  * │                                                   │
  * ├── Stageovereenkomst                               ├── Stagiair                -
  * │                                                   │
