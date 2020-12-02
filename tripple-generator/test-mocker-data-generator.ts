@@ -12,7 +12,7 @@ import { inspect } from 'util';
 
 const user = {
     testAlfNr: {
-        faker: 'random.uuid'
+        faker: 'random.number'
     },
     testValues: {
         values: ['value1', 'value2']

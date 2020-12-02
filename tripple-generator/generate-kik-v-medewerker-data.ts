@@ -4,6 +4,8 @@
  * 
  * KIK-V demo data generator to create employees with initial agreement
  * 
+ * Based on <https://www.npmjs.com/package/mocker-data-generator>
+ * 
  * 
  * Soort overeenkomst                                  Bijbehorende rol            Groep
  * ------------------------------------------------------------------------------------------------------------
