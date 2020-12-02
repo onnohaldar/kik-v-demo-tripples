@@ -101,12 +101,12 @@ export function generateMedewerkerData(
             static: 'vph:Volunteer'
         },
         kik_WerkOvereenkomst_startDatum: {
-            faker: `date.past(${createDatePastInYears})`
+            faker: `date.past(${options.createDatePastInYears})`
         }
     };
 
     const generatedData = mocker()
-        .schema('medewerkerData', medewerkerGenerateSchema, numberToGenerate)
+        .schema('medewerkerData', medewerkerGenerateSchema, options.numberToGenerate)
         .buildSync();
 
     return generatedData.medewerkerData;
