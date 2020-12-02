@@ -70,6 +70,7 @@ export function generateMedewerkerData(
                 'kik:VrijwilligersOvereenkomst'            
             ]
         },
+        /*
         'object.kik_hasAgreement=="kik:InhuurOvereenkomst",vph_hasRole': {
             static: 'vph:Freelancer'
         },
@@ -102,6 +103,32 @@ export function generateMedewerkerData(
         },
         'object.kik_hasAgreement=="kik:VrijwilligersOvereenkomst",vph_hasRole': {
             static: 'vph:Volunteer'
+        },
+        */
+        vph_hasRole: {
+            function: function() {
+                let hasRole = undefined;
+
+                switch (this.object.kik_hasAgreement) {
+                    case 'kik:InhuurOvereenkomst':
+                        hasRole = 'vph:Freelancer';
+                        break;
+                    case 'kik:ArbeidsOvereenkomstBBL':
+                        hasRole = 'vph:Apprentice';
+                        break;
+                    case 'kik:StageOvereenkomst':
+                        hasRole = 'vph:Trainee';
+                        break;
+                    case 'kik:VrijwilligersOvereenkomst':
+                        hasRole = 'vph:Volunteer';
+                        break;
+                    default:
+                        hasRole = 'vph:Employee'
+                        break;
+                }
+
+                return hasRole;
+            }
         },
         kik_hasAgreement_startDatum: {
             faker: `date.past(${options.createDatePastInYears})`
