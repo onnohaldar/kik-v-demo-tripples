@@ -36,8 +36,9 @@ import mocker from 'mocker-data-generator';
 export function generateMedewerkerData(numberToGenerate: number): {
     nodeId: string;
     rdf_type: string;
-    kik_hasAgreement: string;
+    kik_WerkOvereenkomst: string;
     vph_hasRole: string;
+    kik_WerkOvereenkomst_startDatum: string;
 }[] {
     const medewerkerGenerateSchema = {
         nodeId: {
@@ -46,7 +47,7 @@ export function generateMedewerkerData(numberToGenerate: number): {
         rdf_type: {
             static: 'vph:Human'
         },
-        kik_hasAgreement: {
+        kik_WerkOvereenkomst: {
             values: [
                 'kik:InhuurOvereenkomst',
                 'kik:ArbeidsOvereenkomstBepaaldeTijd',
@@ -61,38 +62,41 @@ export function generateMedewerkerData(numberToGenerate: number): {
                 'kik:VrijwilligersOvereenkomst'            
             ]
         },
-        'object.kik_hasAgreement=="kik:InhuurOvereenkomst",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:InhuurOvereenkomst",vph_hasRole': {
             static: 'vph:Freelancer'
         },
-        'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstBepaaldeTijd",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:ArbeidsOvereenkomstBepaaldeTijd",vph_hasRole': {
             static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstBBL",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:ArbeidsOvereenkomstBBL",vph_hasRole': {
             static: 'vph:Apprentice'
         },
-        'object.kik_hasAgreement=="kik:ArbeidsOvereenkomstOnbepaaldeTijd",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:ArbeidsOvereenkomstOnbepaaldeTijd",vph_hasRole': {
             static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="kik:MinMaxContract",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:MinMaxContract",vph_hasRole': {
             static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="kik:NulUrenContract",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:NulUrenContract",vph_hasRole': {
             static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="kik:OproepcontractMetVoorovereenkomst",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:OproepcontractMetVoorovereenkomst",vph_hasRole': {
             static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="kik:StageOvereenkomst",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:StageOvereenkomst",vph_hasRole': {
             static: 'vph:Trainee'
         },
-        'object.kik_hasAgreement=="kik:Uitzendovereenkomst",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:Uitzendovereenkomst",vph_hasRole': {
             static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="kik:PayrollOvereenkomst",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:PayrollOvereenkomst",vph_hasRole': {
             static: 'vph:Employee'
         },
-        'object.kik_hasAgreement=="kik:VrijwilligersOvereenkomst",vph_hasRole': {
+        'object.kik_WerkOvereenkomst=="kik:VrijwilligersOvereenkomst",vph_hasRole': {
             static: 'vph:Volunteer'
+        },
+        kik_WerkOvereenkomst_startDatum: {
+            faker: 'date.past(' + 2 + ')'
         }
     };
 
