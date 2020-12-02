@@ -73,7 +73,7 @@ export function generateMedewerkerData(
         },
         vph_hasRole: {
             function: function() {
-                let hasRole = undefined;
+                let hasRole: string;
 
                 switch (this.object.kik_hasAgreement) {
                     case 'kik:InhuurOvereenkomst':
@@ -101,12 +101,12 @@ export function generateMedewerkerData(
         },
         kik_hasAgreement_eindDatum: {
             function: function() {
-                let eindDatum = undefined;
+                let eindDatum: Date;
 
                 switch (this.object.kik_hasAgreement) {
                     case 'kik:ArbeidsOvereenkomstOnbepaaldeTijd':
                         // Overeenkomsten met onbepaalde tijd zijn al beeindigt of momenteel nog niet beeindigt
-                        if (this.faker.random.boolean) {
+                        if (!this.faker.random.boolean) {
                             eindDatum = this.faker.date.between(this.object.kik_hasAgreement_startDatum, new Date().toISOString());
                         }
                         break;
