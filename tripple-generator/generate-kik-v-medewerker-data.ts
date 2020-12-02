@@ -49,17 +49,13 @@ export function generateMedewerkerData(
         kik_hasAgreement_startDatum: string;
         kik_hasAgreement_eindDatum?: string;
 }[] {
-
     const medewerker = {
         nodeId: {
             faker: 'random.uuid'
         },
         rdf_type: {
             static: 'vph:Human'
-        }
-    };
-
-    const overeenkomst = {
+        },
         kik_hasAgreement: {
             values: [
                 'kik:InhuurOvereenkomst',
@@ -75,32 +71,6 @@ export function generateMedewerkerData(
                 'kik:VrijwilligersOvereenkomst'            
             ]
         },
-        kik_hasAgreement_startDatum: {
-            faker: `date.past(${options.createDatePastInYears})`
-        },
-        kik_hasAgreement_eindDatum: {
-            function: function() {
-                let eindDatum: Date;
-
-                switch (this.object.kik_hasAgreement) {
-                    case 'kik:ArbeidsOvereenkomstOnbepaaldeTijd':
-                        // Overeenkomsten met onbepaalde tijd zijn al beeindigt of momenteel nog niet beeindigt
-                        if (!this.faker.random.boolean) {
-                            eindDatum = this.faker.date.between(this.object.kik_hasAgreement_startDatum, new Date().toISOString());
-                        }
-                        break;
-                    default:
-                        // Overige overeenkomsten zijn al beeindigt of worden 1 jaar in de toekomst ergens beeindigt
-                        eindDatum = this.faker.date.between(this.object.kik_hasAgreement_startDatum, this.faker.date.future(1));
-                        break;
-                }                
-
-                return eindDatum;
-            } 
-        }
-    };
-
-    const bijbeorendeRol = {
         vph_hasRole: {
             function: function() {
                 let hasRole: string;
@@ -126,13 +96,37 @@ export function generateMedewerkerData(
                 return hasRole;
             }
         },
+        kik_hasAgreement_startDatum: {
+            faker: `date.past(${options.createDatePastInYears})`
+        },
+        kik_hasAgreement_eindDatum: {
+            function: function() {
+                let eindDatum: Date;
+
+                switch (this.object.kik_hasAgreement) {
+                    case 'kik:ArbeidsOvereenkomstOnbepaaldeTijd':
+                        // Overeenkomsten met onbepaalde tijd zijn al beeindigt of momenteel nog niet beeindigt
+                        if (!this.faker.random.boolean) {
+                            eindDatum = this.faker.date.between(this.object.kik_hasAgreement_startDatum, new Date().toISOString());
+                        }
+                        break;
+                    default:
+                        // Overige overeenkomsten zijn al beeindigt of worden 1 jaar in de toekomst ergens beeindigt
+                        eindDatum = this.faker.date.between(this.object.kik_hasAgreement_startDatum, this.faker.date.future(1));
+                        break;
+                }                
+
+                return eindDatum;
+            } 
+        },
 
     };
 
-    const generatedData = mocker()
+    const data = mocker()
         .schema('medewerkers', medewerker, options.numberToGenerate)
-        .schema('overeenkomsten', overeenkomst, options.numberToGenerate)
         .buildSync();
 
-    return generatedData.medewerkerData;
+    console.log(data);
+
+    return data.medewerkers;
 }

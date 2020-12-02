@@ -5,6 +5,8 @@
 import { inspect } from 'util';
 import mocker from 'mocker-data-generator';
 
+const numberToGenerate = 10;
+
 const medewerker = {
     id: {
         chance: 'guid'
@@ -19,15 +21,15 @@ const overeenkomst = {
         chance: 'guid'
     },
     medewerkerId: {
-        hasOne: 'medewerker',
+        hasOne: 'medewerkers',
         get: 'id'
     }
 
-}
+};
 
 const generatedData = mocker()
-        .schema('medewerkers', medewerker, 10)
-        .schema('overeenkomsten', overeenkomst, 2)
+        .schema('medewerkers', medewerker, numberToGenerate)
+        .schema('overeenkomsten', overeenkomst, numberToGenerate)
         .buildSync();
 
 console.log(inspect(generatedData, { depth: 10 }));
