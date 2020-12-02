@@ -100,7 +100,18 @@ export function generateMedewerkerData(
         },
         kik_hasAgreement_eindDatum: {
             function: function() {
-                return new Date().toISOString();
+                let eindDatum = undefined;
+
+                switch (this.object.kik_hasAgreement) {
+                    case 'kik:ArbeidsOvereenkomstOnbepaaldeTijd':
+                        
+                        break;
+                    default:
+                        eindDatum = new Date().toISOString();
+                        break;
+                }                
+
+                return eindDatum;
             } 
         },
 
