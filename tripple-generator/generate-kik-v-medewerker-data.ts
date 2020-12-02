@@ -33,14 +33,12 @@
  
 import mocker from 'mocker-data-generator';
 
-interface MedewerkerData {
+export function generateMedewerkerData(numberToGenerate: number): {
     nodeId: string;
     rdf_type: string;
     kik_hasAgreement: string;
     vph_hasRole: string;
-}
-
-export function generateMedewerkerData(numberToGenerate: number): MedewerkerData[] {
+}[] {
     const medewerkerGenerateSchema = {
         nodeId: {
             faker: 'random.uuid'
