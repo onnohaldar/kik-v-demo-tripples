@@ -1,6 +1,6 @@
 /**
  * 
- * File: generate-zzper-tripples.ts
+ * File: generate-kik-v-medewerker-data.ts
  * 
  * KIK-V demo data generator for demo tripels
  * 
@@ -33,8 +33,15 @@
  
 import mocker from 'mocker-data-generator';
 
-export function generateMedewerkerTripples(numberToGenerate: number): any {
-    const medewerker = {
+interface MedewerkerData {
+    nodeId: string;
+    rdf_type: string;
+    kik_hasAgreement: string;
+    vph_hasRole: string;
+}
+
+export function generateMedewerkerData(numberToGenerate: number): MedewerkerData[] {
+    const medewerkerGenerateSchema = {
         nodeId: {
             faker: 'random.uuid'
         },
@@ -91,7 +98,9 @@ export function generateMedewerkerTripples(numberToGenerate: number): any {
         }
     };
 
-    return mocker()
-        .schema('medewerker', medewerker, numberToGenerate)
+    const generatedData = mocker()
+        .schema('medewerkerData', medewerkerGenerateSchema, numberToGenerate)
         .buildSync();
+
+    return generatedData.medewerkerData;
 }
