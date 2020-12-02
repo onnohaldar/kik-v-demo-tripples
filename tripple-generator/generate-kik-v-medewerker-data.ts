@@ -10,14 +10,14 @@
  * Soort overeenkomst                                  Bijbehorende rol            Groep
  * ------------------------------------------------------------------------------------------------------------
  * 
- * Werkovereenkomst                                    Medewerker                  -
+ * kik_WerkOvereenkomst                                vph_hasRole                  -
  * │                                                   │
- * ├── Inhuurovereenkomst                              ├── ZZPer                   Personeel niet in loondienst
+ * ├── kik:InhuurOvereenkomst                          ├── vph:Freelancer          Personeel niet in loondienst
  * │                                                   │
- * ├── Arbeidsovereenkomst                             ├── Werknemer               Personeel in loondienst                        
- * │   ├── Arbeidsovereenkomst bepaalde tijd           │   │
- * │   │   └── Arbeidsovereenkomst BBL                 │   └── Leerling-Werknemer
- * │   └── Arbeidsovereenkomst onbepaalde tijd         │
+ * ├── kik:ArbeidsOvereenkomstBepaaldeTijd             ├── vph:Employee               Personeel in loondienst                        
+ * │   ├── kik:ArbeidsOvereenkomstBepaaldeTijd         │   │
+ * │   │   └── kik:ArbeidsOvereenkomstBBL              │   └── Leerling-Werknemer
+ * │   └── kik:ArbeidsOvereenkomstOnbepaaldeTijd       │
  * │                                                   │
  * ├── Oproepovereenkomst                              ├── Werknemer               Personeel in loondienst
  * │   ├── Min-max contract                            │
@@ -46,6 +46,7 @@ export function generateMedewerkerData(
         kik_WerkOvereenkomst: string;
         vph_hasRole: string;
         kik_WerkOvereenkomst_startDatum: string;
+        kikkik_WerkOvereenkomst_eindDatum?: string;
 }[] {
     const medewerkerGenerateSchema = {
         nodeId: {
@@ -104,6 +105,9 @@ export function generateMedewerkerData(
         },
         kik_WerkOvereenkomst_startDatum: {
             faker: `date.past(${options.createDatePastInYears})`
+        },
+        'object.vph_hasRole=="vph:Freelancer",kik_WerkOvereenkomst_eindDatum': {
+            faker: 'date.future(1)'
         }
     };
 
