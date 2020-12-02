@@ -4,7 +4,7 @@ import mocker from 'mocker-data-generator';
 
 const medewerker = {
     nodeId: {
-            faker: 'random.uuid'
+        chance: 'guid'
     },
     rdf_type: {
         static: 'vph:Human'
