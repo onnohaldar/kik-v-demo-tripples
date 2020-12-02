@@ -49,7 +49,7 @@ export function generateMedewerkerData(
         kik_hasAgreement_startDatum: string;
         kik_hasAgreement_eindDatum?: string;
 }[] {
-    
+
     const medewerker = {
         nodeId: {
             faker: 'random.uuid'
@@ -131,6 +131,7 @@ export function generateMedewerkerData(
 
     const generatedData = mocker()
         .schema('medewerkers', medewerker, options.numberToGenerate)
+        .schema('overeenkomsten', overeenkomst, options.numberToGenerate)
         .buildSync();
 
     return generatedData.medewerkerData;
