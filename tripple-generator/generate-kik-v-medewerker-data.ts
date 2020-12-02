@@ -104,7 +104,7 @@ export function generateMedewerkerData(
 
                 switch (this.object.kik_hasAgreement) {
                     case 'kik:ArbeidsOvereenkomstOnbepaaldeTijd':
-                        
+                        eindDatum = this.faker.date.future(1);
                         break;
                     default:
                         eindDatum = new Date().toISOString();
