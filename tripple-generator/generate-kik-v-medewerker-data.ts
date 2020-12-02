@@ -2,7 +2,7 @@
  * 
  * File: generate-kik-v-medewerker-data.ts
  * 
- * KIK-V demo data generator for demo tripels
+ * KIK-V demo data generator to create employees with initial agreement
  * 
  * 
  * Soort overeenkomst                                  Bijbehorende rol            Groep
@@ -35,7 +35,7 @@ import mocker from 'mocker-data-generator';
 
 export function generateMedewerkerData(
     options: {
-        numberToGenerate: number, 
+        numberToGenerate: number,
         createDatePastInYears: number
     }
     ): {
