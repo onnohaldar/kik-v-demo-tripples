@@ -2,34 +2,34 @@
  * 
  * File: generate-kik-v-medewerker-data.ts
  * 
- * KIK-V demo data generator to create employees with initial agreement
+ * KIK-V demo data generator to create employees (with initial agreement)
  * 
  * Based on <https://www.npmjs.com/package/mocker-data-generator>
  * 
  * 
- * Soort overeenkomst                                  Bijbehorende rol            Groep
+ * Soort overeenkomst                                  Bijbehorende rol         Groep
  * ------------------------------------------------------------------------------------------------------------
  * 
- * kik_WerkOvereenkomst                                vph_hasRole                  -
- * │                                                   │
- * ├── kik:InhuurOvereenkomst                          ├── vph:Freelancer          Personeel niet in loondienst
- * │                                                   │
- * ├── kik:ArbeidsOvereenkomstBepaaldeTijd             ├── vph:Employee               Personeel in loondienst                        
- * │   ├── kik:ArbeidsOvereenkomstBepaaldeTijd         │   │
- * │   │   └── kik:ArbeidsOvereenkomstBBL              │   └── Leerling-Werknemer
- * │   └── kik:ArbeidsOvereenkomstOnbepaaldeTijd       │
- * │                                                   │
- * ├── kik:OproepOvereenkomst                          ├── vph:Employee               Personeel in loondienst
- * │   ├── kik:MinMaxContract                          │
- * │   ├── kik:NulUrenContract                         │
- * │   └── kik:OproepcontractMetVoorovereenkomst       │
- * │                                                   │
- * ├── Stageovereenkomst                               ├── Stagiair                -
- * │                                                   │
- * ├── Uitzendovereenkomst                             Medewerker                  Personeel niet in loondienst
- * │   └── Payrollovereenkomst                         │
- * │                                                   │
- * └── Vrijwilligersovereenkomst                       └── Vrijwilliger            -
+ * kik_WerkOvereenkomst                                vph_hasRole              kik_hasMember   
+ * │                                                   │                        |
+ * ├── kik:InhuurOvereenkomst                          ├── vph:Freelancer       ├─ kik:PersoneelNietInLoondienst
+ * │                                                   │                        |
+ * ├── kik:ArbeidsOvereenkomstBepaaldeTijd             ├── vph:Employee         ├─ kik:PersoneelInLoondienst                        
+ * │   ├── kik:ArbeidsOvereenkomstBepaaldeTijd         │   │                    |
+ * │   │   └── kik:ArbeidsOvereenkomstBBL              │   └── vph:Apprentice   |
+ * │   └── kik:ArbeidsOvereenkomstOnbepaaldeTijd       │                        |
+ * │                                                   │                        |
+ * ├── kik:OproepOvereenkomst                          ├── vph:Employee         ├─ kik:PersoneelInLoondienst
+ * │   ├── kik:MinMaxContract                          │                        |
+ * │   ├── kik:NulUrenContract                         │                        |
+ * │   └── kik:OproepcontractMetVoorovereenkomst       │                        |
+ * │                                                   │                        |
+ * ├── kik:StageOvereenkomst                           ├── vph:Trainee          ├─ (no membership defined)
+ * │                                                   │                        |
+ * ├── kik:Uitzendovereenkomst                         ├── vph:Employee         ├─ kik:PersoneelNietInLoondienst
+ * │   └── kik:PayrollOvereenkomst                     │                        |
+ * │                                                   │                        |
+ * └── kik:VrijwilligersOvereenkomst                   └── vph:Volunteer        └- (no membership defined)
  * 
  */
  
