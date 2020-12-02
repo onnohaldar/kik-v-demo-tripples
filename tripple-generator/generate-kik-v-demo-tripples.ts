@@ -15,3 +15,5 @@ const medewerkerData = generateMedewerkerData({ numberToGenerate: 50, createDate
 console.log(inspect(medewerkerData, { depth: 10 }));
 console.log(medewerkerData[0].vph_hasRole);
 
+
+
