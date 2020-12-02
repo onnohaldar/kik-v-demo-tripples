@@ -106,9 +106,12 @@ export function generateMedewerkerData(
         kik_hasAgreement_startDatum: {
             faker: `date.past(${options.createDatePastInYears})`
         },
-        'object.vph_hasRole=="vph:Freelancer",kik_hasAgreement_eindDatum': {
-            faker: 'date.future(1)'
-        }
+        kik_hasAgreement_eindDatum: {
+            function: function() {
+                return new Date().toISOString();
+            } 
+        },
+
     };
 
     const generatedData = mocker()
