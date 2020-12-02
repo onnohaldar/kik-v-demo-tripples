@@ -33,12 +33,17 @@
  
 import mocker from 'mocker-data-generator';
 
-export function generateMedewerkerData(numberToGenerate: number): {
-    nodeId: string;
-    rdf_type: string;
-    kik_WerkOvereenkomst: string;
-    vph_hasRole: string;
-    kik_WerkOvereenkomst_startDatum: string;
+export function generateMedewerkerData(
+    options: {
+        numberToGenerate: number, 
+        createDatePastInYears: number
+    }
+    ): {
+        nodeId: string;
+        rdf_type: string;
+        kik_WerkOvereenkomst: string;
+        vph_hasRole: string;
+        kik_WerkOvereenkomst_startDatum: string;
 }[] {
     const medewerkerGenerateSchema = {
         nodeId: {
@@ -96,7 +101,7 @@ export function generateMedewerkerData(numberToGenerate: number): {
             static: 'vph:Volunteer'
         },
         kik_WerkOvereenkomst_startDatum: {
-            faker: 'date.past(' + 2 + ')'
+            faker: `date.past(${createDatePastInYears})`
         }
     };
 
