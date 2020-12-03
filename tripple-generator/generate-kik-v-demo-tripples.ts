@@ -27,6 +27,8 @@ let generatedData: KikVDemoData = {
     medewerkers: generateKikVMedewerkerData({ numberToGenerate: options.medewerkersToGenerate })
 }
 
+
+
 console.log('======================================================================');
 console.log(inspect(generatedData, { depth: 10 }));
 console.log('======================================================================');
