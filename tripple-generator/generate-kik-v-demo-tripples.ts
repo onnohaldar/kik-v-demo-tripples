@@ -21,11 +21,13 @@ console.log(argv[2]);
 const options: GeneratorOptions = JSON.parse(argv[2]);
 
 let medewerkers =  generateKikVMedewerkerData({ numberToGenerate: options.medewerkersToGenerate });
+
+const overeenkomsten = generateKikVOvereenkomstData(medewerkers, { minToGenerate: 1, maxToGenerate: 3, createDatePastInYears: 2 });
+
 console.log('======================================================================');
 console.log(inspect(medewerkers, { depth: 10 }));
 console.log('======================================================================');
 
-const overeenkomsten = generateKikVOvereenkomstData(medewerkers, { minToGenerate: 1, maxToGenerate: 3, createDatePastInYears: 2 });
 console.log('======================================================================');
 console.log(inspect(overeenkomsten, { depth: 10 }));
 console.log('======================================================================');
