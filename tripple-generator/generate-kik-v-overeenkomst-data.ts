@@ -72,12 +72,21 @@ export function generateKikVOvereenkomstData(
         }
     };
     
+    /**
+     * genereer:
+     * - minimaal het minimaal aantal overeenkomsten per medewerker
+     * - maximaal het maximaal aantal overeenkomsten per medewerker
+     */
     const generatedData = mocker()
         .schema('overeenkomsten', overeenkomst, {
             min: options.minToGenerate * medewerkers.length, 
             max: options.maxToGenerate * medewerkers.length
         })
         .buildSync();
+
+    /**
+     * Koppel aan elke medewerker een initiele overeenkomst
+     */
     const overeenkomsten: KikVOvereenkomstData[] = generatedData.overeenkomsten;
     let overeenkomstIndex = 0;
     
