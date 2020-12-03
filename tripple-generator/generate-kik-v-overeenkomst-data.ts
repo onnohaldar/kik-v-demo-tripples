@@ -107,7 +107,16 @@ export function generateKikVOvereenkomstData(
      * Koppel vervolgovereenkomsten wanneer mogelijk 
      * maar niet meer dan het maximaal aantal te genereren overeenkomsten per medewerker
      */
+
     for (const vervolgOvereenkomst of overeenkomsten.slice(overeenkomstIndex)) {
+        let medewerkersLessMax = medewerkers.filter(medewerker => medewerker.overeenkomstNodeIds.length < options.maxToGenerate);
+
+        switch (vervolgOvereenkomst.rdfType) {
+            case 'kik:InhuurOvereenkomst': {
+                let medewerker = medewerkersLessMax
+                break;
+            }
+        }
 
     }
 
