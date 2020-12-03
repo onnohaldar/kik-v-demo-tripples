@@ -73,7 +73,7 @@ export function generateKikVOvereenkomstData(
     };
     
     /**
-     * genereer:
+     * Genereer:
      * - minimaal het minimaal aantal overeenkomsten per medewerker
      * - maximaal het maximaal aantal overeenkomsten per medewerker
      */
@@ -85,11 +85,14 @@ export function generateKikVOvereenkomstData(
         .buildSync();
 
     /**
-     * Koppel aan elke medewerker een initiele overeenkomst
+     * Koppel aan elke medewerker 1 of meerdere overeenkomsten
      */
     const overeenkomsten: KikVOvereenkomstData[] = generatedData.overeenkomsten;
     let overeenkomstIndex = 0;
-    
+
+    /**
+     * Koppel aan elke medewerker een initiele overeenkomst
+     */
     for (let medewerker of medewerkers) {
 
         if (!medewerker.overeenkomstNodeIds) {
@@ -98,6 +101,14 @@ export function generateKikVOvereenkomstData(
         
         medewerker.overeenkomstNodeIds.push(overeenkomsten[overeenkomstIndex].nodeId);
         overeenkomstIndex ++;
+    }
+
+    /**
+     * Koppel vervolgovereenkomsten wanneer mogelijk 
+     * maar niet meer dan het maximaal aantal te genereren overeenkomsten per medewerker
+     */
+    for (const vervolgOvereenkomst of overeenkomsten.slice(overeenkomstIndex)) {
+
     }
 
     return overeenkomsten;
