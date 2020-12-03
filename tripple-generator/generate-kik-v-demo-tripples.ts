@@ -13,12 +13,12 @@ import { argv } from 'process';
 import { generateKikVMedewerkerData } from './generate-kik-v-medewerker-data';
 import { generateKikVOvereenkomstData, KikVOvereenkomstData } from './generate-kik-v-overeenkomst-data';
 
-interface Options {
+interface GeneratorOptions {
     medewerkersToGenerate: number;
 }
 
 console.log(argv[2]);
-const options: Options = JSON.parse(argv[2]);
+const options: GeneratorOptions = JSON.parse(argv[2]);
 
 let medewerkers =  generateKikVMedewerkerData({ numberToGenerate: options.medewerkersToGenerate });
 console.log('======================================================================');
