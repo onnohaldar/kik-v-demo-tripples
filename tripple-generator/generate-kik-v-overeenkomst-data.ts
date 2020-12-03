@@ -20,6 +20,9 @@ export interface KikVOvereenkomstData {
 }
 
 /**
+ * 
+ * Genereren van aan de medewerkers gekoppelde overeenkomsten
+ * 
  * @param medewerkers referentie naar medewerkers waar overeenkomsten aan moeten worden gekoppeld
  * 
  * @param options generatie opties

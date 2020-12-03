@@ -16,6 +16,14 @@ export interface KikVMedewerkerData {
     overeenkomstNodeIds?: string[];
 }
 
+/**
+ * 
+ * Genereren van medewerkers in een verpleeghuis
+ * 
+ * @param options generatie opties
+ * 
+ * @returns medewerkers
+ */
 export function generateKikVMedewerkerData(
     options: {
         numberToGenerate: number
