@@ -7,17 +7,19 @@
  * - chance doc: <https://chancejs.com/>
  * - casual doc: <https://github.com/boo1ean/casual>
  */
-import { inspect } from 'util';
+
 import mocker from 'mocker-data-generator';
+
+export interface KikVMedewerkerData {
+    nodeId: string;
+    rdf_type: string;
+}
 
 export function generateKikVMedewerkerData(
     options: {
         numberToGenerate: number
     }
-    ): {
-        nodeId: string;
-        rdf_type: string;
-}[] {
+    ): KikVMedewerkerData[] {
 
     const medewerker = {
         nodeId: {
@@ -33,12 +35,6 @@ export function generateKikVMedewerkerData(
     const generatedData = mocker()
     .schema('medewerkers', medewerker, options.numberToGenerate)
     .buildSync();
-
-    console.log('======================================================================');
-    console.log('generateKikVMedewerkerData');
-    console.log('----------------------------------------------------------------------');
-    console.log(inspect(generatedData, { depth: 10 }));
-    console.log('======================================================================');
 
 return generatedData.medewerkers;
 
