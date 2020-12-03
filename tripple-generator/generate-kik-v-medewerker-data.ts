@@ -13,6 +13,7 @@ import mocker from 'mocker-data-generator';
 export interface KikVMedewerkerData {
     nodeId: string;
     rdf_type: string;
+    overeenkomstNodeIds?: string[];
 }
 
 export function generateKikVMedewerkerData(
