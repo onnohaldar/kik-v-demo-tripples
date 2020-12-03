@@ -104,20 +104,22 @@ export function generateKikVOvereenkomstData(
     }
 
     /**
-     * Koppel vervolgovereenkomsten wanneer mogelijk 
-     * maar niet meer dan het maximaal aantal te genereren overeenkomsten per medewerker
+     * Koppel overige overeenkomsten aan een medewerker (waar mogelijk) 
      */
+    const overigeOvereenkomsten = overeenkomsten.slice(overeenkomstIndex);
 
-    for (const vervolgOvereenkomst of overeenkomsten.slice(overeenkomstIndex)) {
-        let medewerkersLessMax = medewerkers.filter(medewerker => medewerker.overeenkomstNodeIds.length < options.maxToGenerate);
+    for (const overeenkomst of overigeOvereenkomsten) {
+        /**
+         * Koppel alleen nieuwe overkomsten voor medewerkers die nog niet het maximaal overeenkomsten hebben
+         */
+        let medewerkersLtMaxOvk = medewerkers.filter(medewerker => medewerker.overeenkomstNodeIds.length < options.maxToGenerate);
+        let statusGekoppeld = false;
 
-        switch (vervolgOvereenkomst.rdfType) {
-            case 'kik:InhuurOvereenkomst': {
-                let medewerker = medewerkersLessMax
-                break;
+        for (let medewerker of medewerkersLtMaxOvk) {
+            if (!statusGekoppeld) {
+                
             }
         }
-
     }
 
     return overeenkomsten;
