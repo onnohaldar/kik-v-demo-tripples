@@ -6,6 +6,8 @@
  * 
  */
 
+import { writeFileSync, readFileSync } from 'fs';
+import { join, resolve } from 'path';
 import { inspect } from 'util';
 import { argv } from 'process';
 //import { NamespaceManagerInstance, BlankNode, IRI, TypedLiteral, LangLiteral, NTriple, NQuad  } from 'rdflib-ts';
@@ -24,10 +26,5 @@ let medewerkers =  generateKikVMedewerkerData({ numberToGenerate: options.medewe
 
 const overeenkomsten = generateKikVOvereenkomstData(medewerkers, { minToGenerate: 1, maxToGenerate: 3, createDatePastInYears: 2 });
 
-console.log('======================================================================');
-console.log(inspect(medewerkers, { depth: 10 }));
-console.log('======================================================================');
-
-console.log('======================================================================');
-console.log(inspect(overeenkomsten, { depth: 10 }));
-console.log('======================================================================');
+// Resolve tripple file destination path
+const trippleFileDestPath = resolve(__dirname, '..', 'generated-tripples');
