@@ -15,6 +15,8 @@ import { KikVMedewerkerData } from './generate-kik-v-medewerker-data';
 export interface KikVOvereenkomstData {
     nodeId: string;
     rdfType: string;
+    kikStartDatum: string;
+    kikEindDatum?: string;
 }
 
 export function generateKikVOvereenkomstData(
@@ -69,13 +71,15 @@ export function generateKikVOvereenkomstData(
             }
         }
     };
-
     
-    let generatedData = mocker()
-        .schema('overeenkomsten', overeenkomst, { min: options.minToGenerate, max: options.maxToGenerate  })
+    const generatedData = mocker()
+        .schema('overeenkomsten', overeenkomst, {
+            min: options.minToGenerate * medewerkers.length, 
+            max: options.maxToGenerate * medewerkers.length
+        })
         .buildSync();
-    
+    const overeenkomsten: KikVOvereenkomstData[] = generatedData.overeenkomsten;
+    medewerkers[0].overeenkomstNodeIds[overeenkomsten[0].nodeId];
 
-    return generatedData.medewerkers;
-
+    return overeenkomsten;
 }
