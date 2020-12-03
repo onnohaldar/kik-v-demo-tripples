@@ -117,7 +117,12 @@ export function generateKikVOvereenkomstData(
 
         for (let medewerker of medewerkersLtMaxOvk) {
             if (!statusGekoppeld) {
-                
+                /**
+                 * To-Do: 
+                 * - flow voor overgangen tussen overeenkomsten met transitie-tabel etc....
+                 * - aansluiting van datums tussen meerdere overeenkomsten per medewerker
+                 */
+                medewerker.overeenkomstNodeIds.push(overeenkomst.nodeId);
             }
         }
     }
