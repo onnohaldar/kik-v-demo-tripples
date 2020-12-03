@@ -16,9 +16,8 @@ interface KikVDemoData {
 }
 
 let generatedData: KikVDemoData = {
-    medewerkers: generateKikVMedewerkerData({ numberToGenerate: 10 });
+    medewerkers: generateKikVMedewerkerData({ numberToGenerate: 10 })
 }
-
 
 console.log('======================================================================');
 console.log(inspect(generatedData, { depth: 10 }));

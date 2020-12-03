@@ -23,9 +23,7 @@ export function generateKikVMedewerkerData(
 
     const medewerker = {
         nodeId: {
-            function: function() {
-                return 'mwd' + this.chance.integer;
-            }
+            chance: 'guid'
         },
         rdf_type: {
             static: 'vph:Human'
