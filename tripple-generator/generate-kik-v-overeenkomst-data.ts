@@ -79,7 +79,7 @@ export function generateKikVOvereenkomstData(
         })
         .buildSync();
     const overeenkomsten: KikVOvereenkomstData[] = generatedData.overeenkomsten;
-    medewerkers[0].overeenkomstNodeIds[overeenkomsten[0].nodeId];
+    //medewerkers[0].overeenkomstNodeIds[overeenkomsten[0].nodeId];
 
     return overeenkomsten;
 }
