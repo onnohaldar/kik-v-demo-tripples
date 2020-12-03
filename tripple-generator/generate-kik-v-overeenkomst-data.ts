@@ -19,6 +19,13 @@ export interface KikVOvereenkomstData {
     kikEindDatum?: string;
 }
 
+/**
+ * @param medewerkers referentie naar medewerkers waar overeenkomsten aan moeten worden gekoppeld
+ * 
+ * @param options generatie opties
+ * 
+ * @returns gekoppeldeOvereenkomsten
+ */
 export function generateKikVOvereenkomstData(
     medewerkers: KikVMedewerkerData[],
     options: {
@@ -89,6 +96,7 @@ export function generateKikVOvereenkomstData(
      */
     const overeenkomsten: KikVOvereenkomstData[] = generatedData.overeenkomsten;
     let overeenkomstIndex = 0;
+    let gekoppeldeOvereenkomsten: KikVOvereenkomstData[] = [];
 
     /**
      * Koppel aan elke medewerker een initiele overeenkomst
@@ -100,6 +108,7 @@ export function generateKikVOvereenkomstData(
         }
         
         medewerker.overeenkomstNodeIds.push(overeenkomsten[overeenkomstIndex].nodeId);
+        gekoppeldeOvereenkomsten.push(overeenkomsten[overeenkomstIndex]);
         overeenkomstIndex ++;
     }
 
@@ -123,9 +132,10 @@ export function generateKikVOvereenkomstData(
                  * - aansluiting van datums tussen meerdere overeenkomsten per medewerker
                  */
                 medewerker.overeenkomstNodeIds.push(overeenkomst.nodeId);
+                gekoppeldeOvereenkomsten.push(overeenkomst);
             }
         }
     }
 
-    return overeenkomsten;
+    return gekoppeldeOvereenkomsten;
 }
