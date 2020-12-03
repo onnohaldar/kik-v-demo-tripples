@@ -12,7 +12,7 @@ import mocker from 'mocker-data-generator';
 
 export interface KikVMedewerkerData {
     nodeId: string;
-    rdf_type: string;
+    rdfType: string;
     overeenkomstNodeIds?: string[];
 }
 
@@ -26,7 +26,7 @@ export function generateKikVMedewerkerData(
         nodeId: {
             chance: 'guid'
         },
-        rdf_type: {
+        rdfType: {
             static: 'vph:Human'
         }
     };

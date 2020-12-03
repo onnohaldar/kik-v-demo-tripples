@@ -14,7 +14,7 @@ import { KikVMedewerkerData } from './generate-kik-v-medewerker-data';
 
 export interface KikVOvereenkomstData {
     nodeId: string;
-    rdf_type: string;
+    rdfType: string;
 }
 
 export function generateKikVOvereenkomstData(
@@ -30,7 +30,7 @@ export function generateKikVOvereenkomstData(
         nodeId: {
             chance: 'guid'
         },
-        rdf_type: {
+        rdfType: {
             values: [
                 'kik:InhuurOvereenkomst',
                 'kik:ArbeidsOvereenkomstBepaaldeTijd',
@@ -45,23 +45,23 @@ export function generateKikVOvereenkomstData(
                 'kik:VrijwilligersOvereenkomst'
             ]
         },
-        kik_startDatum: {
+        kikStartDatum: {
             faker: `date.past(${options.createDatePastInYears})`
         },
-        kik_eindDatum: {
+        kikEindDatum: {
             function: function () {
                 let eindDatum: Date;
 
-                switch (this.object.rdf_type) {
+                switch (this.object.rdfType) {
                     case 'kik:ArbeidsOvereenkomstOnbepaaldeTijd':
                         // Overeenkomsten met onbepaalde tijd zijn al beeindigt of momenteel nog niet beeindigt
                         if (!this.faker.random.boolean) {
-                            eindDatum = this.faker.date.between(this.object.kik_hasAgreement_startDatum, new Date().toISOString());
+                            eindDatum = this.faker.date.between(this.object.kikStartDatum, new Date().toISOString());
                         }
                         break;
                     default:
                         // Overige overeenkomsten zijn al beeindigt of worden 1 jaar in de toekomst ergens beeindigt
-                        eindDatum = this.faker.date.between(this.object.kik_hasAgreement_startDatum, this.faker.date.future(1));
+                        eindDatum = this.faker.date.between(this.object.kikStartDatum, this.faker.date.future(1));
                         break;
                 }
 
