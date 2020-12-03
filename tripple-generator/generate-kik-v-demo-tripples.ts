@@ -27,9 +27,8 @@ let medewerkers =  generateKikVMedewerkerData({ numberToGenerate: options.medewe
 const overeenkomsten = generateKikVOvereenkomstData(medewerkers, { minToGenerate: 1, maxToGenerate: 3, createDatePastInYears: 2 });
 
 
-const configFile = join(__dirname, 'kik-v-demo-tripples.json');
-const configData = readFileSync(configFile, 'utf-8');
-const config = JSON.parse(configData);
+const turtleTemplateFile = join(__dirname, 'kik-v-demo-tripples.template.ttl');
+const turtleTemplate = readFileSync(turtleTemplateFile, 'utf-8');
 
 const destPath = resolve(__dirname, '..', 'generated-tripples');
 const turtleFile = join(destPath, 'kik-v-demo-tripples-v01.ttl');
