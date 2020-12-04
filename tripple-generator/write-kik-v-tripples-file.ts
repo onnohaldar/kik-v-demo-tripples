@@ -9,12 +9,13 @@
 import { writeFileSync, readFileSync } from 'fs';
 import { join, resolve } from 'path';
 
-import { KikVMedewerkerData } from './generate-kik-v-medewerker-data';
-import { KikVOvereenkomstData } from './generate-kik-v-overeenkomst-data';
+import { KikVMedewerkerData } from './kik-v-medewerker-data';
+import { KikVOvereenkomstData } from './kik-v-overeenkomst-data';
 
-export function writeKikVTripplesFile({
-
-}) {
+export function writeKikVTripplesFile(
+    medewerkers: KikVMedewerkerData[],
+    overeenkomsten: KikVOvereenkomstData[]
+) {
     const turtleTemplateFile = join(__dirname, 'kik-v-demo-tripples.template.ttl');
     const turtleTemplate = readFileSync(turtleTemplateFile, 'utf-8');
     

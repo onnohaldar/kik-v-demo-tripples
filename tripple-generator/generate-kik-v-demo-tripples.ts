@@ -12,7 +12,7 @@ import { argv } from 'process';
 //import { NamespaceManagerInstance, BlankNode, IRI, TypedLiteral, LangLiteral, NTriple, NQuad  } from 'rdflib-ts';
 
 import { generateKikVMedewerkerData } from './generate-kik-v-medewerker-data';
-import { generateKikVOvereenkomstData, KikVOvereenkomstData } from './generate-kik-v-overeenkomst-data';
+import { generateKikVOvereenkomstData } from './generate-kik-v-overeenkomst-data';
 
 interface GeneratorOptions {
     medewerkersToGenerate: number;
