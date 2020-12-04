@@ -19,6 +19,11 @@ const ttFile = 'kik-v-demo-tripples-v01.ttl';
 const destFolder = 'generated-tripples';
 const ttlIdent = '  ';
 
+/**
+ * Export generated KIK-V data as TTL-formated file
+ * @param medewerkers
+ * @param overeenkomsten 
+ */
 export function writeTtlFile(
     medewerkers: MedewerkerData[],
     overeenkomsten: OvereenkomstData[]
@@ -57,26 +62,32 @@ export function writeTtlFile(
         ttlMedewerkerData += ' .\n\n';
     }
  
-    ttlFileData += ttlFileSectionTemplate
-        .replace('<%= ttlFileSection %>', 'KIK-V Demo Medewerkers')
-        .replace('<%= ttlSectionData %>', ttlMedewerkerData);
+    ttlFileData += parseSection(ttlFileSectionTemplate, 'KIK-V Demo Medewerkers', ttlMedewerkerData);
 
     let ttlOvereenkomstData = '';
 
     for (const overeenkomst of overeenkomsten) {
         ttlOvereenkomstData += ':' + overeenkomst.nodeId + ' a ' + overeenkomst.rdfType + '\n';
-        ttlOvereenkomstData += ttlIdent + 'kik:startDatum' + overeenkomst.kikStartDatum;
+        ttlOvereenkomstData += ttlIdent + 'kik:startDatum ' + parseXsdDate(overeenkomst.kikStartDatum);
 
         if (overeenkomst.kikEindDatum) {
-            ttlOvereenkomstData += ';\n' + ttlIdent + 'kik:eindDatum' + overeenkomst.kikStartDatum;
+            ttlOvereenkomstData += ';\n' + ttlIdent + 'kik:eindDatum ' + parseXsdDate(overeenkomst.kikStartDatum);
         }
 
         ttlOvereenkomstData += ' .\n\n';
     }
 
-    ttlFileData += ttlFileSectionTemplate
-        .replace('<%= ttlFileSection %>', 'KIK-V Demo Overeenkomsten')
-        .replace('<%= ttlSectionData %>', ttlOvereenkomstData);
+    ttlFileData += parseSection(ttlFileSectionTemplate, 'KIK-V Demo Overeenkomsten', ttlOvereenkomstData);
 
     writeFileSync(ttlDestFilePath, ttlFileData);    
+}
+
+function parseXsdDate(isoDateString: string) {
+    return '"' + isoDateString + '"' + '^^xsd:date';
+}
+
+function parseSection(sectionTemplate: string, ttlSectionTitle: string, ttlSectionData: string) {
+    return sectionTemplate
+    .replace('<%= ttlSectionTitle %>', ttlSectionTitle)
+    .replace('<%= ttlSectionData %>', ttlSectionData);
 }
