@@ -10,20 +10,20 @@ import { writeFileSync, readFileSync } from 'fs';
 import { join, resolve } from 'path';
 //import { NamespaceManagerInstance, BlankNode, IRI, TypedLiteral, LangLiteral, NTriple, NQuad  } from 'rdflib-ts';
 
-import { KikVMedewerkerData } from './kik-v-medewerker-data';
-import { KikVOvereenkomstData } from './kik-v-overeenkomst-data';
+import { KikVMedewerkerData } from './medewerker-data';
+import { KikVOvereenkomstData } from './overeenkomst-data';
 
-export function writeKikVTripplesFile(
+export function writeKikVTtlFile(
     medewerkers: KikVMedewerkerData[],
     overeenkomsten: KikVOvereenkomstData[]
 ) {
-    const turtleTemplateFile = join(__dirname, 'kik-v-demo-tripples.template.ttl');
-    const turtleTemplate = readFileSync(turtleTemplateFile, 'utf-8');
+    const tripplesTemplateFile = join(__dirname, 'tripples-file.template.ttl');
+    const tripplesTemplate = readFileSync(tripplesTemplateFile, 'utf-8');
     
     const destPath = resolve(__dirname, '..', 'generated-tripples');
     const turtleFile = join(destPath, 'kik-v-demo-tripples-v01.ttl');
     
-    let turtleData = turtleTemplate;
+    let turtleData = tripplesTemplate;
 
     console.log(turtleData);
     

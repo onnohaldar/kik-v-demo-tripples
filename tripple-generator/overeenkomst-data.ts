@@ -1,4 +1,4 @@
-export interface KikVOvereenkomstData {
+export interface OvereenkomstData {
     nodeId: string;
     rdfType: string;
     kikStartDatum: string;

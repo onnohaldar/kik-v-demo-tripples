@@ -1,6 +1,6 @@
 /**
  * 
- * File: generate-kik-v-overeenkomst-data.ts
+ * File: generate-overeenkomst-data.ts
  * 
  * Based on <https://www.npmjs.com/package/mocker-data-generator>
  * - faker docs: <https://marak.github.io/faker.js/>
@@ -10,8 +10,8 @@
 
 import mocker from 'mocker-data-generator';
 
-import { KikVMedewerkerData } from './kik-v-medewerker-data';
-import {  KikVOvereenkomstData } from './kik-v-overeenkomst-data';
+import { KikVMedewerkerData } from './medewerker-data';
+import {  KikVOvereenkomstData } from './overeenkomst-data';
 
 /**
  * 
@@ -23,7 +23,7 @@ import {  KikVOvereenkomstData } from './kik-v-overeenkomst-data';
  * 
  * @returns gekoppeldeOvereenkomsten
  */
-export function generateKikVOvereenkomstData(
+export function generateOvereenkomstData(
     medewerkers: KikVMedewerkerData[],
     options: {
         minToGenerate: number,

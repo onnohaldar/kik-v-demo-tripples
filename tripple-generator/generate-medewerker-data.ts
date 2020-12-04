@@ -1,6 +1,6 @@
 /**
  * 
- * File: generate-kik-v-persoon-data.ts
+ * File: generate-medewerker-data.ts
  * 
  * Based on <https://www.npmjs.com/package/mocker-data-generator>
  * - faker docs: <https://marak.github.io/faker.js/>
@@ -10,7 +10,7 @@
 
 import mocker from 'mocker-data-generator';
 
-import { KikVMedewerkerData } from './kik-v-medewerker-data';
+import { KikVMedewerkerData } from './medewerker-data';
 
 /**
  * 
@@ -20,7 +20,7 @@ import { KikVMedewerkerData } from './kik-v-medewerker-data';
  * 
  * @returns medewerkers
  */
-export function generateKikVMedewerkerData(
+export function generateMedewerkerData(
     options: {
         numberToGenerate: number
     }

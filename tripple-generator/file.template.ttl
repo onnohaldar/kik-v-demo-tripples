@@ -1,8 +1,8 @@
 #################################################################
-# File: kik-v-demo-tripples.ttl
-# Author: Onno Haldar
-# Date: 12-11-2020
-# Status: Initial instances KIK-V Demo Triplestore   
+# File: @File
+# Author: @Author
+# Date: @Date
+# Status: @Status   
 #################################################################
 
 @prefix : <http://testdata.zinl.nl/> .
@@ -18,4 +18,3 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vph: <http://www.zinl.nl/ontologies/VPH-domain-ontology#> .
 @base <http://testdata.zinl.nl/> .
-
