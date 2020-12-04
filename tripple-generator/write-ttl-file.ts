@@ -40,7 +40,9 @@ export function writeTtlFile(
     for (const medewerker of medewerkers) {
         ttlMedewerkerData += ':' + medewerker.nodeId + ' a ' + medewerker.rdfType + '\n';
     }
-
+    ttlFileData += ttlFileSectionTemplate
+        .replace('<%= ttlFileSection %>', 'KIK-V Demo Medewerkers')
+        .replace('<%= ttlSectionData %>', ttlMedewerkerData);
 
 
     writeFileSync(ttlDestFilePath, ttlFileData);    
