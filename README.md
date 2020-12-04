@@ -35,3 +35,4 @@ npx ts-node -P ./tsconfig.json tripple-generator/generate-demo-tripples.ts '{ "m
 De uitvoer staat in de "generated tripples" directorie onder de naam "kik-v-demo-tripples-v01.ttl".
 
 Zie ook voorbeeld <https://github.com/onnohaldar/kik-v-demo-tripples/blob/main/generated-tripples/kik-v-demo-tripples-v01.ttl>
+
