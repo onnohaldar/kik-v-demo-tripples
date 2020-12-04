@@ -1,7 +1,7 @@
 #################################################################
 # File: kik-v-demo-tripples-v01.ttl
 # Author: <https://github.com/onnohaldar/kik-v-demo-tripples>
-# Date: <%= creationDate %>
+# Date of creation: Fri, 04 Dec 2020 10:15:59 GMT
 # Status: <%= status %>
 #################################################################
 
