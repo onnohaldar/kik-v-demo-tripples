@@ -41,20 +41,20 @@ export function writeTtlFile(
 
     for (const medewerker of medewerkers) {
         ttlMedewerkerData += ':' + medewerker.nodeId + ' a ' + medewerker.rdfType + '\n';
-
-        let kikvHasAgreementProp = ttlIdent + 'kik:hasAgreement\n';
+        ttlMedewerkerData += ttlIdent + 'kik:hasAgreement\n';
         let memberCount = 0;
+
         for (const overeenkomstNodeId of medewerker.overeenkomstNodeIds) {
-            kikvHasAgreementProp +=  ttlIdent + ttlIdent + ':' + overeenkomstNodeId
+            ttlMedewerkerData += ttlIdent + ttlIdent + ':' + overeenkomstNodeId
             memberCount ++;
 
             if (memberCount < medewerker.overeenkomstNodeIds.length) {
-                kikvHasAgreementProp += ',\n';
+                ttlMedewerkerData += ',\n';
             }
 
         }
 
-        ttlMedewerkerData += kikvHasAgreementProp + ' .\n\n';
+        ttlMedewerkerData += ' .\n\n';
     }
  
     ttlFileData += ttlFileSectionTemplate
@@ -66,7 +66,17 @@ export function writeTtlFile(
     for (const overeenkomst of overeenkomsten) {
         ttlOvereenkomstData += ':' + overeenkomst.nodeId + ' a ' + overeenkomst.rdfType + '\n';
         ttlOvereenkomstData += ttlIdent + 'kik:startDatum' + overeenkomst.kikStartDatum;
+
+        if (overeenkomst.kikEindDatum) {
+            ttlOvereenkomstData += ';\n' + ttlIdent + 'kik:eindDatum' + overeenkomst.kikStartDatum;
+        }
+
+        ttlOvereenkomstData += ' .\n\n';
     }
+
+    ttlFileData += ttlFileSectionTemplate
+        .replace('<%= ttlFileSection %>', 'KIK-V Demo Overeenkomsten')
+        .replace('<%= ttlSectionData %>', ttlOvereenkomstData);
 
     writeFileSync(ttlDestFilePath, ttlFileData);    
 }
