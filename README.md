@@ -1,2 +1,8 @@
 # kik-v-demo-tripples
-KIK-V tripples to demo voorbeeldberekeningen
+KIK-V demo tripple generatie tooling
+
+## Installatie
+
+''''
+git clone https://github.com/onnohaldar/kik-v-demo-tripples.git
+''''
