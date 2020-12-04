@@ -4,9 +4,9 @@
   "description": "KIK-V demo tripples for learning and support purposes",
   "main": "index.ts",
   "scripts": {
-    "test": "ts-node -P ./tsconfig.json tripple-generator/test-mocker-data-generator.ts",
-    "start": "ts-node -P ./tsconfig.json tripple-generator/generate-kik-v-demo-tripples.ts '{ \"medewerkersToGenerate\": 20 }'",
-    "test:db:function": "ts-node -P ./tsconfig.json tripple-generator/test-db-function.ts"
+    "start": "ts-node -P ./tsconfig.json tripple-generator/generate-demo-tripples.ts '{ \"medewerkersToGenerate\": 20 }'",
+    "test": "ts-node -P ./tsconfig.json test/test-mocker-data-generator.ts",
+    "test:db:function": "ts-node -P ./tsconfig.json test/test-db-function.ts"
   },
   "repository": {
     "type": "git",
