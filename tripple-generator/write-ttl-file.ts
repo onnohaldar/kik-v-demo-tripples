@@ -45,10 +45,12 @@ export function writeTtlFile(
         let memberCount = 0;
         for (const overeenkomstNodeId of medewerker.overeenkomstNodeIds) {
             kikvHasAgreementProp +=  ttlIdent + ttlIdent + ':' + overeenkomstNodeId
+            memberCount ++;
 
             if (memberCount < medewerker.overeenkomstNodeIds.length) {
                 kikvHasAgreementProp += ',\n';
             }
+
         }
 
         ttlMedewerkerData += kikvHasAgreementProp + ' .\n\n';
