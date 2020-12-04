@@ -1,8 +1,8 @@
 #################################################################
 # File: <%= ttlFile %>
-# Author: @Author
-# Date: @Date
-# Status: @Status   
+# Author: <%= author %>
+# Date: <%= creationDate %>
+# Status: <%= status %>
 #################################################################
 
 @prefix : <http://testdata.zinl.nl/> .

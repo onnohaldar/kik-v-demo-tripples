@@ -1,8 +1,8 @@
 #################################################################
 # File: kik-v-demo-tripples-v01.ttl
-# Author: @Author
-# Date: @Date
-# Status: @Status   
+# Author: <https://github.com/onnohaldar/kik-v-demo-tripples>
+# Date: <%= creationDate %>
+# Status: <%= status %>
 #################################################################
 
 @prefix : <http://testdata.zinl.nl/> .

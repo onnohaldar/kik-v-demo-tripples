@@ -13,7 +13,8 @@ import { join, resolve } from 'path';
 import { MedewerkerData } from './medewerker-data';
 import { OvereenkomstData } from './overeenkomst-data';
 
-const ttlTemplateFile = 'file.template.ttl';
+const ttlFileTemplateName = 'file.template.ttl';
+const ttlFileSectionTemplateName = 'file-section.template.ttl';
 const ttFile = 'kik-v-demo-tripples-v01.ttl';
 const destFolder = 'generated-tripples';
 
@@ -21,13 +22,15 @@ export function writeTtlFile(
     medewerkers: MedewerkerData[],
     overeenkomsten: OvereenkomstData[]
 ) {
-    const ttlTemplateFilePath = join(__dirname, ttlTemplateFile);
-    const ttlTemplate = readFileSync(ttlTemplateFilePath, 'utf-8');
+    const ttlFileTemplatePath = join(__dirname, ttlFileTemplateName);
+    const ttlFileTemplate = readFileSync(ttlFileTemplatePath, 'utf-8');
     
     const destPath = resolve(__dirname, '..', destFolder);
     const ttlDestFilePath = join(destPath, ttFile);
     
-    let ttlFileData = ttlTemplate.replace('<%= ttlFile %>', ttFile);
+    let ttlFileData = ttlFileTemplate
+        .replace('<%= ttlFile %>', ttFile)
+        .replace('<%= author %>', '<https://github.com/onnohaldar/kik-v-demo-tripples>');
 
     console.log(ttlFileData);
     writeFileSync(ttlDestFilePath, ttlFileData);
