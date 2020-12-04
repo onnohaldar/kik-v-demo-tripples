@@ -14,6 +14,7 @@ import { MedewerkerData } from './medewerker-data';
 import { OvereenkomstData } from './overeenkomst-data';
 
 const ttlTemplateFile = 'file.template.ttl';
+const ttFile = 'kik-v-demo-tripples-v01.ttl';
 
 export function writeKikVTtlFile(
     medewerkers: MedewerkerData[],
@@ -23,10 +24,10 @@ export function writeKikVTtlFile(
     const ttlTemplate = readFileSync(ttlTemplateFilePath, 'utf-8');
     
     const destPath = resolve(__dirname, '..', 'generated-tripples');
-    const ttlDestFilePath = join(destPath, 'kik-v-demo-tripples-v01.ttl');
+    const ttlDestFilePath = join(destPath, ttFile);
     
-    let turtleData = ttlTemplate;
+    let ttlFileData = ttlTemplate.replace('<%= ttlFile %>', ttFile);
 
-    console.log(turtleData);
+    console.log(ttlFileData);
     
 }
