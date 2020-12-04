@@ -10,6 +10,7 @@ import { writeFileSync, readFileSync } from 'fs';
 import { join, resolve } from 'path';
 
 import { KikVMedewerkerData } from './generate-kik-v-medewerker-data';
+import { KikVOvereenkomstData } from './generate-kik-v-overeenkomst-data';
 
 export function writeKikVTripplesFile({
 
