@@ -1,7 +1,7 @@
 #################################################################
 # File: kik-v-demo-tripples-v01.ttl
 # Author: <https://github.com/onnohaldar/kik-v-demo-tripples>
-# Date of creation: Fri, 04 Dec 2020 11:15:08 GMT
+# Date of creation: Fri, 04 Dec 2020 11:48:21 GMT
 # Status: initiele versie ter evaluatie Marc Nieuwland
 #################################################################
 
@@ -14,7 +14,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix kikv: <http://www.zinl.nl/ontologies/KIK-V#> .
+@prefix kik: <http://www.zinl.nl/ontologies/KIK-V#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vph: <http://www.zinl.nl/ontologies/VPH-domain-ontology#> .
 @base <http://testdata.zinl.nl/> .
@@ -23,124 +23,367 @@
 # KIK-V Demo Medewerkers
 #################################################################
 
-:20384513-f37a-5574-af3b-7908a61214b9 a vph:Human
-  kikv:hasAgreement
-    :dd8f1847-ee9f-5ffa-a563-69ff2181efaa,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:161d031b-101f-58ed-b013-307797d0757b a vph:Human
+  kik:hasAgreement
+    :907c61e7-7c6d-5cab-a16e-365a2862f837,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:c13899a9-391f-50fe-997b-e07375c79831 a vph:Human
-  kikv:hasAgreement
-    :ea68c65a-db8d-5e77-ba87-f3a183d6ec02,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:b0c0ee6b-60bb-5963-a4e9-d3f00137e9e4 a vph:Human
+  kik:hasAgreement
+    :3c5378a3-98d2-5814-b443-72e3c745de18,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:c28581b7-ca83-5c1b-b199-afb7d75ae53f a vph:Human
-  kikv:hasAgreement
-    :6263491a-878a-5378-b100-31222e52c068,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:ab0e40ca-c880-5e87-9c9e-74f8bc31e0c4 a vph:Human
+  kik:hasAgreement
+    :7652dff6-76d7-50c6-9084-ea478a0d6893,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:befd29a2-3de7-5172-88a1-d5ab11534a72 a vph:Human
-  kikv:hasAgreement
-    :bd3141a9-2287-5b90-8aa5-e91fd0067882,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:6fcd76db-cba9-5371-8067-51ebddfdc21b a vph:Human
+  kik:hasAgreement
+    :2f24da71-1299-5715-a8b9-45081dacf582,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:86d0485b-25d1-536a-a7ad-f94977be6223 a vph:Human
-  kikv:hasAgreement
-    :6fa518e8-e15f-54a9-a7df-3cad4ea3d560,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:3ba7e87b-6de5-5acc-9eed-86560e2d0ecd a vph:Human
+  kik:hasAgreement
+    :8f1eeb62-4ef7-5adb-a6c0-728f06bb4556,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:889d074e-7a0d-5f4c-889a-2b5879b35155 a vph:Human
-  kikv:hasAgreement
-    :81539fe3-0f95-52c6-9a3f-05c0480b57c6,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:76f7f5fd-66e8-5420-81ba-847cd307c308 a vph:Human
+  kik:hasAgreement
+    :37d36b40-acc9-5fab-acd7-06226cbb4932,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:54bd577e-06b8-5097-be70-c5bc7d4664e4 a vph:Human
-  kikv:hasAgreement
-    :cc2bce6a-9bef-5792-b94b-c94a95bb869e,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:33778f97-7727-5afd-a892-0d8127f18437 a vph:Human
+  kik:hasAgreement
+    :5244f97b-0ca4-5c42-9be8-a0320990477e,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:7f53c75a-4210-5411-b208-e96d21220aef a vph:Human
-  kikv:hasAgreement
-    :24f952f0-8643-537b-b554-ead2e41cba0c,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:82946230-7cb6-593f-b9fa-ebc24a451713 a vph:Human
+  kik:hasAgreement
+    :590719e0-11af-55ab-995f-7e2f0a0aab61,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:5bbc1864-a649-5768-92df-046f684e9d2f a vph:Human
-  kikv:hasAgreement
-    :ba79fa2d-376d-5f66-b2fa-ab58eb4a428b,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:e6fc9daa-3921-532e-abea-59556a88d562 a vph:Human
+  kik:hasAgreement
+    :559d0cd2-6d59-5734-9e50-4d39b0584f70,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:5a3cfac9-bf73-51ae-a858-e52db01f5bc1 a vph:Human
-  kikv:hasAgreement
-    :5c42e806-afd9-5691-b02b-163048c37077,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:ff097099-d275-5f02-8225-d95f589bbd2b a vph:Human
+  kik:hasAgreement
+    :d38ef534-32fd-5c81-885b-18d4bd049a04,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:ee60bbf2-6010-5cff-8927-fdfdf256c4be a vph:Human
-  kikv:hasAgreement
-    :31251153-d1d7-551a-8229-d50b75bb5cd2,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:57dcacd2-5e6b-5e1a-86e4-0bb11de7a042 a vph:Human
+  kik:hasAgreement
+    :dd076c01-e6a5-5d74-8b10-4c29984adb81,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:8ba830c7-59c4-59bf-b278-d6da8915a048 a vph:Human
-  kikv:hasAgreement
-    :a09d1076-5504-52d4-be26-7ad3191390e1,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:2c142062-ebec-5c90-9e0d-70af13150d12 a vph:Human
+  kik:hasAgreement
+    :80ba7342-c686-54a0-a8bb-98b75c3b74f7,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:f49f6529-cccb-5308-8946-f9973e3865e5 a vph:Human
-  kikv:hasAgreement
-    :d5825ab9-8110-53b4-9b94-09ceb7db5abe,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:fea26447-af81-5b76-97c8-63e5963bc038 a vph:Human
+  kik:hasAgreement
+    :fc03051e-7f55-50f5-bb7d-f41fd3a52f3a,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:3b12d3bf-6908-50ff-98bc-af91bfc529b9 a vph:Human
-  kikv:hasAgreement
-    :c5cee74e-fad7-504c-9166-5a3e890ce972,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:c6e6a7cd-f288-5b57-bfe0-fc3c0202a1e3 a vph:Human
+  kik:hasAgreement
+    :c24b0ff4-160a-5db1-a655-e367f56037d0,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:4c6c5233-7fd0-5d8a-abe1-1eed64443754 a vph:Human
-  kikv:hasAgreement
-    :28ebbad7-bcec-52a1-a38c-91c1b6f479d8,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:9fbc4ff9-700e-5261-8ad1-19c08fa75af7 a vph:Human
+  kik:hasAgreement
+    :85dcf311-2c6c-5a52-9197-a3ec0f587761,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:8f110eec-52f9-57d2-9791-f6f22f0440c7 a vph:Human
-  kikv:hasAgreement
-    :bd3eeeb5-aae9-5a85-bcfb-8e86aea777e3,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:746f137a-f22d-51d9-9b90-60c32d87dd30 a vph:Human
+  kik:hasAgreement
+    :0db2785b-fefb-583a-bc98-c81f9cca23da,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:7a355948-f706-5d8d-943f-a8040950a301 a vph:Human
-  kikv:hasAgreement
-    :952b5cec-74dd-5e79-a2cd-7b6a6087e3b5,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:a3e0f0a5-d106-5316-9662-5b6e2546d109 a vph:Human
+  kik:hasAgreement
+    :dc924d09-2bdc-58a2-b670-a8b2dba4bf61,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:f15de7ef-fee9-5dd3-a5f1-83d9a86fc91d a vph:Human
-  kikv:hasAgreement
-    :7c82e453-d10f-5b49-84da-c15e320ed6b6,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:175d1a83-5d1d-5431-bea3-b0e27b3ba784 a vph:Human
+  kik:hasAgreement
+    :52495d45-168a-53f7-a4c4-bc7141c3e7ef,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:25796999-e1cb-5696-9a9c-eaa2596e7b4e a vph:Human
-  kikv:hasAgreement
-    :fbd9e4ce-1c2b-5c24-8e8e-b7fabd0533d5,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:9eb02146-1935-5296-93c6-0eccf7d5c29b a vph:Human
+  kik:hasAgreement
+    :a3b6c9ee-67ea-509b-9c5d-10638ebe61db,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
 
-:f315421f-5d74-583a-8be9-2b21e9ed905d a vph:Human
-  kikv:hasAgreement
-    :38f8f2a3-e707-5e30-a635-ac42c9f85023,
-    :555141db-61ae-58f4-9f4f-d4f7bc3098e9,
-    :85550f9f-62d1-5dde-a969-2aea617d5481 .
+:05b19b28-6db4-5b9c-b20f-6f7008bab701 a vph:Human
+  kik:hasAgreement
+    :05996492-6d1b-5fa1-9b78-b244c9cceaea,
+    :173c72ec-04bb-5e00-a852-01c40b6f3f5d,
+    :fdbd7fb6-a88b-5618-831c-8b275235a3d8 .
+
+
+
+#################################################################
+# KIK-V Demo Overeenkomsten
+#################################################################
+
+:907c61e7-7c6d-5cab-a16e-365a2862f837 a kik:NulUrenContract
+  kik:startDatumThu May 09 2019 17:47:44 GMT+0200 (GMT+02:00);
+  kik:eindDatumThu May 09 2019 17:47:44 GMT+0200 (GMT+02:00) .
+
+:3c5378a3-98d2-5814-b443-72e3c745de18 a kik:ArbeidsOvereenkomstOnbepaaldeTijd
+  kik:startDatumSun Nov 01 2020 15:35:35 GMT+0100 (GMT+01:00) .
+
+:7652dff6-76d7-50c6-9084-ea478a0d6893 a kik:ArbeidsOvereenkomstBepaaldeTijd
+  kik:startDatumSat Jan 12 2019 17:00:00 GMT+0100 (GMT+01:00);
+  kik:eindDatumSat Jan 12 2019 17:00:00 GMT+0100 (GMT+01:00) .
+
+:2f24da71-1299-5715-a8b9-45081dacf582 a kik:NulUrenContract
+  kik:startDatumThu Aug 22 2019 04:22:26 GMT+0200 (GMT+02:00);
+  kik:eindDatumThu Aug 22 2019 04:22:26 GMT+0200 (GMT+02:00) .
+
+:8f1eeb62-4ef7-5adb-a6c0-728f06bb4556 a kik:Uitzendovereenkomst
+  kik:startDatumSat Oct 24 2020 13:45:08 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 24 2020 13:45:08 GMT+0200 (GMT+02:00) .
+
+:37d36b40-acc9-5fab-acd7-06226cbb4932 a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumThu Jan 17 2019 07:06:13 GMT+0100 (GMT+01:00);
+  kik:eindDatumThu Jan 17 2019 07:06:13 GMT+0100 (GMT+01:00) .
+
+:5244f97b-0ca4-5c42-9be8-a0320990477e a kik:InhuurOvereenkomst
+  kik:startDatumWed Oct 16 2019 08:24:54 GMT+0200 (GMT+02:00);
+  kik:eindDatumWed Oct 16 2019 08:24:54 GMT+0200 (GMT+02:00) .
+
+:590719e0-11af-55ab-995f-7e2f0a0aab61 a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumSun Nov 24 2019 11:24:12 GMT+0100 (GMT+01:00);
+  kik:eindDatumSun Nov 24 2019 11:24:12 GMT+0100 (GMT+01:00) .
+
+:559d0cd2-6d59-5734-9e50-4d39b0584f70 a kik:ArbeidsOvereenkomstOnbepaaldeTijd
+  kik:startDatumTue Apr 14 2020 22:38:44 GMT+0200 (GMT+02:00) .
+
+:d38ef534-32fd-5c81-885b-18d4bd049a04 a kik:StageOvereenkomst
+  kik:startDatumSun Oct 20 2019 08:14:39 GMT+0200 (GMT+02:00);
+  kik:eindDatumSun Oct 20 2019 08:14:39 GMT+0200 (GMT+02:00) .
+
+:dd076c01-e6a5-5d74-8b10-4c29984adb81 a kik:ArbeidsOvereenkomstBepaaldeTijd
+  kik:startDatumFri Jan 24 2020 17:00:13 GMT+0100 (GMT+01:00);
+  kik:eindDatumFri Jan 24 2020 17:00:13 GMT+0100 (GMT+01:00) .
+
+:80ba7342-c686-54a0-a8bb-98b75c3b74f7 a kik:StageOvereenkomst
+  kik:startDatumFri Oct 04 2019 02:50:40 GMT+0200 (GMT+02:00);
+  kik:eindDatumFri Oct 04 2019 02:50:40 GMT+0200 (GMT+02:00) .
+
+:fc03051e-7f55-50f5-bb7d-f41fd3a52f3a a kik:OproepcontractMetVoorovereenkomst
+  kik:startDatumSat Aug 10 2019 03:58:28 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Aug 10 2019 03:58:28 GMT+0200 (GMT+02:00) .
+
+:c24b0ff4-160a-5db1-a655-e367f56037d0 a kik:ArbeidsOvereenkomstBepaaldeTijd
+  kik:startDatumWed Dec 18 2019 13:05:04 GMT+0100 (GMT+01:00);
+  kik:eindDatumWed Dec 18 2019 13:05:04 GMT+0100 (GMT+01:00) .
+
+:85dcf311-2c6c-5a52-9197-a3ec0f587761 a kik:ArbeidsOvereenkomstOnbepaaldeTijd
+  kik:startDatumWed Jun 03 2020 20:11:38 GMT+0200 (GMT+02:00) .
+
+:0db2785b-fefb-583a-bc98-c81f9cca23da a kik:OproepcontractMetVoorovereenkomst
+  kik:startDatumSat Nov 07 2020 05:08:38 GMT+0100 (GMT+01:00);
+  kik:eindDatumSat Nov 07 2020 05:08:38 GMT+0100 (GMT+01:00) .
+
+:dc924d09-2bdc-58a2-b670-a8b2dba4bf61 a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Jul 02 2019 02:28:43 GMT+0200 (GMT+02:00);
+  kik:eindDatumTue Jul 02 2019 02:28:43 GMT+0200 (GMT+02:00) .
+
+:52495d45-168a-53f7-a4c4-bc7141c3e7ef a kik:InhuurOvereenkomst
+  kik:startDatumFri Jul 17 2020 07:11:06 GMT+0200 (GMT+02:00);
+  kik:eindDatumFri Jul 17 2020 07:11:06 GMT+0200 (GMT+02:00) .
+
+:a3b6c9ee-67ea-509b-9c5d-10638ebe61db a kik:VrijwilligersOvereenkomst
+  kik:startDatumSat Jul 18 2020 21:04:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Jul 18 2020 21:04:30 GMT+0200 (GMT+02:00) .
+
+:05996492-6d1b-5fa1-9b78-b244c9cceaea a kik:VrijwilligersOvereenkomst
+  kik:startDatumMon Jan 06 2020 21:07:55 GMT+0100 (GMT+01:00);
+  kik:eindDatumMon Jan 06 2020 21:07:55 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:173c72ec-04bb-5e00-a852-01c40b6f3f5d a kik:ArbeidsOvereenkomstBBL
+  kik:startDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00);
+  kik:eindDatumTue Dec 11 2018 22:50:15 GMT+0100 (GMT+01:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
+
+:fdbd7fb6-a88b-5618-831c-8b275235a3d8 a kik:StageOvereenkomst
+  kik:startDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00);
+  kik:eindDatumSat Oct 12 2019 20:25:30 GMT+0200 (GMT+02:00) .
 
 
