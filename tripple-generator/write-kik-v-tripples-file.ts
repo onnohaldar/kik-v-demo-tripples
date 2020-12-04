@@ -23,5 +23,8 @@ export function writeKikVTripplesFile(
     const destPath = resolve(__dirname, '..', 'generated-tripples');
     const turtleFile = join(destPath, 'kik-v-demo-tripples-v01.ttl');
     
-        
+    let turtleData = turtleTemplate;
+
+    console.log(turtleData);
+    
 }
