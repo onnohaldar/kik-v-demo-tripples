@@ -82,10 +82,20 @@ export function writeTtlFile(
     writeFileSync(ttlDestFilePath, ttlFileData);    
 }
 
+/**
+ * Format ttl XSD-date
+ * @param isoDateString 
+ */
 function parseXsdDate(isoDateString: string) {
     return '"' + isoDateString + '"' + '^^xsd:date';
 }
 
+/**
+ * Format ttl section with template
+ * @param sectionTemplate template string with parsevariables <%= ttlSectionTitle %> and <%= ttlSectionData %>
+ * @param ttlSectionTitle title string
+ * @param ttlSectionData  turtle formated data string with section data
+ */
 function parseSection(sectionTemplate: string, ttlSectionTitle: string, ttlSectionData: string) {
     return sectionTemplate
     .replace('<%= ttlSectionTitle %>', ttlSectionTitle)
