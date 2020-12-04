@@ -27,7 +27,7 @@ Het huidige script voor de generatie van 20 medewerkers kan eenvoudig worden ges
 npm start
 ````
 
-Voor generatie van meer dan 20 Medewerkers kan als volgt via NPX worden gestart
+De generatie van meer dan 20 Medewerkers kan via NPX worden gedaan
 ````
 npx ts-node -P ./tsconfig.json tripple-generator/generate-demo-tripples.ts '{ "medewerkersToGenerate": 50 }'
 ````
