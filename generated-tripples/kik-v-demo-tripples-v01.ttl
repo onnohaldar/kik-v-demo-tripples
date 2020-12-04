@@ -1,8 +1,8 @@
 #################################################################
 # File: kik-v-demo-tripples-v01.ttl
 # Author: <https://github.com/onnohaldar/kik-v-demo-tripples>
-# Date of creation: Fri, 04 Dec 2020 10:15:59 GMT
-# Status: <%= status %>
+# Date of creation: Fri, 04 Dec 2020 10:18:15 GMT
+# Status: initiele versie ter evaluatie Marc Nieuwland
 #################################################################
 
 @prefix : <http://testdata.zinl.nl/> .
