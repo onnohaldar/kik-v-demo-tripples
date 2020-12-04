@@ -8,6 +8,7 @@
 
 import { writeFileSync, readFileSync } from 'fs';
 import { join, resolve } from 'path';
+//import { NamespaceManagerInstance, BlankNode, IRI, TypedLiteral, LangLiteral, NTriple, NQuad  } from 'rdflib-ts';
 
 import { KikVMedewerkerData } from './kik-v-medewerker-data';
 import { KikVOvereenkomstData } from './kik-v-overeenkomst-data';

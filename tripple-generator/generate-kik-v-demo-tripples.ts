@@ -9,7 +9,6 @@
 
 import { inspect } from 'util';
 import { argv } from 'process';
-//import { NamespaceManagerInstance, BlankNode, IRI, TypedLiteral, LangLiteral, NTriple, NQuad  } from 'rdflib-ts';
 
 import { generateKikVMedewerkerData } from './generate-kik-v-medewerker-data';
 import { generateKikVOvereenkomstData } from './generate-kik-v-overeenkomst-data';
