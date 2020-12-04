@@ -41,14 +41,19 @@ export function writeTtlFile(
     for (const medewerker of medewerkers) {
         ttlMedewerkerData += ':' + medewerker.nodeId + ' a ' + medewerker.rdfType + '\n';
 
-        let kikHasAgreement = '';
+        let kikvHasAgreementProp = ttlIdent + 'kikv:hasAgreement\n';
+        let memberCount = 0;
         for (const overeenkomstNodeId of medewerker.overeenkomstNodeIds) {
-            kikHasAgreement +=  ttlIdent + ttlIdent + ':' + overeenkomstNodeId + ',\n';
+            kikvHasAgreementProp +=  ttlIdent + ttlIdent + ':' + overeenkomstNodeId
+
+            if (memberCount < medewerker.overeenkomstNodeIds.length) {
+                kikvHasAgreementProp += ',\n';
+            }
         }
 
-
-        ttlMedewerkerData += '.\n\n';
+        ttlMedewerkerData += kikvHasAgreementProp + ' .\n\n';
     }
+ 
     ttlFileData += ttlFileSectionTemplate
         .replace('<%= ttlFileSection %>', 'KIK-V Demo Medewerkers')
         .replace('<%= ttlSectionData %>', ttlMedewerkerData);

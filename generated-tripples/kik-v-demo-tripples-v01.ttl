@@ -1,7 +1,7 @@
 #################################################################
 # File: kik-v-demo-tripples-v01.ttl
 # Author: <https://github.com/onnohaldar/kik-v-demo-tripples>
-# Date of creation: Fri, 04 Dec 2020 10:37:36 GMT
+# Date of creation: Fri, 04 Dec 2020 11:11:29 GMT
 # Status: initiele versie ter evaluatie Marc Nieuwland
 #################################################################
 
@@ -23,64 +23,144 @@
 # KIK-V Demo Medewerkers
 #################################################################
 
-:39f01a91-5e66-532a-857a-f06484e8da89 a vph:Human
-.
+:956ca2c4-a7af-504f-a55c-76bbcbd51b8b a vph:Human
+  kikv:hasAgreement
+    :4ad5c91a-154c-53a5-b3f0-af4ebc1e7b6b,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:edc94096-e770-5b1c-9419-fbed86c2ae9d a vph:Human
-.
+:60f69132-3f2f-5a6f-bdb3-5e7b1eae072e a vph:Human
+  kikv:hasAgreement
+    :409ffb31-9808-5dcf-bbec-51696a8988b3,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:13a9b927-eaf0-5206-b70a-5993efe68e50 a vph:Human
-.
+:fd06826b-eb38-5f52-9e42-33e9617ea099 a vph:Human
+  kikv:hasAgreement
+    :5a39bad8-f206-5859-ab49-61d0266fe807,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:37c608b4-bee6-5e32-b7da-5b7515c676da a vph:Human
-.
+:b1754b42-193d-5dfb-8467-3f268c358619 a vph:Human
+  kikv:hasAgreement
+    :b45b219c-dcf0-56cc-b4fb-eaa14da8e8c9,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:e11041c6-364c-5e4d-84e7-4feee71524fe a vph:Human
-.
+:67204916-58df-5676-a2fa-9f9b02c713fe a vph:Human
+  kikv:hasAgreement
+    :c4942117-e460-5c0b-9e20-5d92b01e048b,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:f98c7ecf-0277-52cf-9bad-4509792e0c29 a vph:Human
-.
+:bbb3b4cf-5bbd-5b66-a124-758f5c73fe41 a vph:Human
+  kikv:hasAgreement
+    :021c3f18-0377-55be-8d48-a23fee42036f,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:ba3f9fe5-9d8a-5f29-b0f0-6b29c577c6b0 a vph:Human
-.
+:0ec66a0d-8af5-595f-8e59-a801952a55af a vph:Human
+  kikv:hasAgreement
+    :47dcfbaf-f360-5bf4-8843-d50b911d919b,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:dc8fff1e-9be1-5a2f-b375-34634020d3cc a vph:Human
-.
+:2ed0b6d7-73ce-5c6b-83ac-9a359db8b288 a vph:Human
+  kikv:hasAgreement
+    :a65edc68-af38-5c39-9821-0bef62ceba8d,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:ee15d197-0ded-5796-9cf9-13e00caf86b7 a vph:Human
-.
+:d7ff38eb-eac7-5d05-b62e-eef52434e9bc a vph:Human
+  kikv:hasAgreement
+    :3973243b-e2a5-5f22-8671-7096667795fb,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:4dce1a26-6832-5f9a-828e-0a314ecf63a4 a vph:Human
-.
+:ac9f2a6b-13da-51c0-9b0e-04652ff88121 a vph:Human
+  kikv:hasAgreement
+    :3e4d8ded-5ee6-5317-9afc-eaf85599259b,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:2b5201f2-ea4b-5ef1-9b75-c60ae3fa52c3 a vph:Human
-.
+:35177a63-7b51-5137-bdab-bf3e66c97ada a vph:Human
+  kikv:hasAgreement
+    :5f9765d7-4b43-5528-8fc1-4e590351b047,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:c8ba7892-fc3c-5eea-80d4-e7adba4d3e80 a vph:Human
-.
+:1968ac7f-e7dd-5b48-95ed-22f6e615710c a vph:Human
+  kikv:hasAgreement
+    :97f1ba8a-6943-512f-ab24-150679d59249,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:8e568de6-9db1-5693-876d-396d35dee679 a vph:Human
-.
+:cc295aff-fae0-59b9-b1cc-5c52e7dee280 a vph:Human
+  kikv:hasAgreement
+    :8bc3ff5b-9073-5806-9632-9d8e803b54fa,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:8dd4c08b-f45b-5a58-814d-b76909b5577a a vph:Human
-.
+:3e4dbafb-01cb-518c-897d-3796b83225ad a vph:Human
+  kikv:hasAgreement
+    :df9d4e8e-bafe-59c8-b955-e628c8210712,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:908d862b-2d27-5d01-9d21-3d937a868d24 a vph:Human
-.
+:04572b8a-8af9-5b94-a67f-eb6ecfd59f6c a vph:Human
+  kikv:hasAgreement
+    :3a54f262-dd19-53cb-a3e5-212e1ae8e6e1,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:38be7edc-3dfd-5473-b961-5d0731e93d97 a vph:Human
-.
+:6cac10ea-3d93-5ed3-acb7-aece5b9a3424 a vph:Human
+  kikv:hasAgreement
+    :7f99d138-6600-556d-9c4b-0c8374ea095b,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:4d99cb54-10e8-5884-909d-28db0a68f0cd a vph:Human
-.
+:2b1340df-0849-5d58-afee-f08129c5d760 a vph:Human
+  kikv:hasAgreement
+    :41f9f121-088c-5474-bda8-b571ae485fa2,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:d9793ace-ea1d-5296-8cdb-26ec90da07ac a vph:Human
-.
+:472b48fa-b1ee-5165-a4ab-3ce835b86d54 a vph:Human
+  kikv:hasAgreement
+    :305593f9-fafe-5a58-8f5a-19de2a861601,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:74b5d71b-bb99-5c41-8bfa-2fe56c4e68d9 a vph:Human
-.
+:23c46719-25e1-5543-be04-ce01e118df3f a vph:Human
+  kikv:hasAgreement
+    :ccce5ef9-9389-566e-9364-3d6c9a78fe72,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
-:a9027e20-7e8b-5bc8-a8df-4bfbd836d6dd a vph:Human
-.
+:88fc29e3-7821-5822-bebd-8e2af1286fae a vph:Human
+  kikv:hasAgreement
+    :778738dd-c1b2-5e7d-ae17-dcda764ff8d3,
+    :f78b0835-1ce6-5982-bfda-74ec9704a64f,
+    :9242d0f8-00fa-5e02-8b04-84a9277bd0e1,
+ .
 
 
