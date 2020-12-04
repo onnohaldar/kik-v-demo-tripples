@@ -15,6 +15,7 @@ import { OvereenkomstData } from './overeenkomst-data';
 
 const ttlTemplateFile = 'file.template.ttl';
 const ttFile = 'kik-v-demo-tripples-v01.ttl';
+const destFolder = 'generated-tripples';
 
 export function writeTtlFile(
     medewerkers: MedewerkerData[],
@@ -23,11 +24,12 @@ export function writeTtlFile(
     const ttlTemplateFilePath = join(__dirname, ttlTemplateFile);
     const ttlTemplate = readFileSync(ttlTemplateFilePath, 'utf-8');
     
-    const destPath = resolve(__dirname, '..', 'generated-tripples');
+    const destPath = resolve(__dirname, '..', destFolder);
     const ttlDestFilePath = join(destPath, ttFile);
     
     let ttlFileData = ttlTemplate.replace('<%= ttlFile %>', ttFile);
 
     console.log(ttlFileData);
+    writeFileSync(ttlDestFilePath, ttlFileData);
     
 }
