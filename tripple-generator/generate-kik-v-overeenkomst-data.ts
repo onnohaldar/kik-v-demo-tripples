@@ -10,14 +10,8 @@
 
 import mocker from 'mocker-data-generator';
 
-import { KikVMedewerkerData } from './generate-kik-v-medewerker-data';
-
-export interface KikVOvereenkomstData {
-    nodeId: string;
-    rdfType: string;
-    kikStartDatum: string;
-    kikEindDatum?: string;
-}
+import { KikVMedewerkerData } from './kik-v-medewerker-data';
+import {  KikVOvereenkomstData } from './kik-v-overeenkomst-data';
 
 /**
  * 

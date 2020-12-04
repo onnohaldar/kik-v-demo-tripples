@@ -10,11 +10,7 @@
 
 import mocker from 'mocker-data-generator';
 
-export interface KikVMedewerkerData {
-    nodeId: string;
-    rdfType: string;
-    overeenkomstNodeIds?: string[];
-}
+import { KikVMedewerkerData } from './kik-v-medewerker-data';
 
 /**
  * 
