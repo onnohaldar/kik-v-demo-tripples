@@ -10,12 +10,12 @@ import { writeFileSync, readFileSync } from 'fs';
 import { join, resolve } from 'path';
 //import { NamespaceManagerInstance, BlankNode, IRI, TypedLiteral, LangLiteral, NTriple, NQuad  } from 'rdflib-ts';
 
-import { KikVMedewerkerData } from './medewerker-data';
-import { KikVOvereenkomstData } from './overeenkomst-data';
+import { MedewerkerData } from './medewerker-data';
+import { OvereenkomstData } from './overeenkomst-data';
 
 export function writeKikVTtlFile(
-    medewerkers: KikVMedewerkerData[],
-    overeenkomsten: KikVOvereenkomstData[]
+    medewerkers: MedewerkerData[],
+    overeenkomsten: OvereenkomstData[]
 ) {
     const tripplesTemplateFile = join(__dirname, 'tripples-file.template.ttl');
     const tripplesTemplate = readFileSync(tripplesTemplateFile, 'utf-8');

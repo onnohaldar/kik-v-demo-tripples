@@ -6,12 +6,10 @@
  * 
  */
 
-
-import { inspect } from 'util';
 import { argv } from 'process';
 
 import { generateMedewerkerData } from './generate-medewerker-data';
-import { generateOvereenkomstData } from './generate-kik-v-overeenkomst-data';
+import { generateOvereenkomstData } from './generate-overeenkomst-data';
 import { writeKikVTtlFile } from './write-ttl-file';
 
 interface GeneratorOptions {
@@ -21,8 +19,8 @@ interface GeneratorOptions {
 console.log(argv[2]);
 const options: GeneratorOptions = JSON.parse(argv[2]);
 
-let medewerkers =  generateKikVMedewerkerData({ numberToGenerate: options.medewerkersToGenerate });
+let medewerkers =  generateMedewerkerData({ numberToGenerate: options.medewerkersToGenerate });
 
-const overeenkomsten = generateKikVOvereenkomstData(medewerkers, { minToGenerate: 1, maxToGenerate: 3, createDatePastInYears: 2 });
+const overeenkomsten = generateOvereenkomstData(medewerkers, { minToGenerate: 1, maxToGenerate: 3, createDatePastInYears: 2 });
 
 writeKikVTtlFile(medewerkers, overeenkomsten);

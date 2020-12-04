@@ -10,7 +10,7 @@
 
 import mocker from 'mocker-data-generator';
 
-import { KikVMedewerkerData } from './medewerker-data';
+import { MedewerkerData } from './medewerker-data';
 
 /**
  * 
@@ -24,7 +24,7 @@ export function generateMedewerkerData(
     options: {
         numberToGenerate: number
     }
-    ): KikVMedewerkerData[] {
+    ): MedewerkerData[] {
 
     const medewerker = {
         nodeId: {

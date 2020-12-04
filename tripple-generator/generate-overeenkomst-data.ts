@@ -10,8 +10,8 @@
 
 import mocker from 'mocker-data-generator';
 
-import { KikVMedewerkerData } from './medewerker-data';
-import {  KikVOvereenkomstData } from './overeenkomst-data';
+import { MedewerkerData } from './medewerker-data';
+import {  OvereenkomstData } from './overeenkomst-data';
 
 /**
  * 
@@ -24,18 +24,19 @@ import {  KikVOvereenkomstData } from './overeenkomst-data';
  * @returns gekoppeldeOvereenkomsten
  */
 export function generateOvereenkomstData(
-    medewerkers: KikVMedewerkerData[],
+    medewerkers: MedewerkerData[],
     options: {
         minToGenerate: number,
         maxToGenerate: number,
         createDatePastInYears: number
     }
-): KikVOvereenkomstData[] {
+): OvereenkomstData[] {
 
     const overeenkomst = {
         nodeId: {
             chance: 'guid'
         },
+        // generatie op basis van onderstaande overeenkomst-klassen
         rdfType: {
             values: [
                 'kik:InhuurOvereenkomst',
@@ -91,9 +92,9 @@ export function generateOvereenkomstData(
     /**
      * Koppel aan elke medewerker 1 of meerdere overeenkomsten
      */
-    const overeenkomsten: KikVOvereenkomstData[] = generatedData.overeenkomsten;
+    const overeenkomsten: OvereenkomstData[] = generatedData.overeenkomsten;
     let overeenkomstIndex = 0;
-    let gekoppeldeOvereenkomsten: KikVOvereenkomstData[] = [];
+    let gekoppeldeOvereenkomsten: OvereenkomstData[] = [];
 
     /**
      * Koppel aan elke medewerker een initiele overeenkomst
@@ -116,7 +117,8 @@ export function generateOvereenkomstData(
 
     for (const overeenkomst of overigeOvereenkomsten) {
         /**
-         * Koppel alleen nieuwe overkomsten voor medewerkers die nog niet het maximaal overeenkomsten hebben
+         * Koppel alleen nieuwe overkomsten aan medewerkers waaraan nog niet het maximaal 
+         * aantal overeenkomsten zijn gekoppeld
          */
         let medewerkersLtMaxOvk = medewerkers.filter(medewerker => medewerker.overeenkomstNodeIds.length < options.maxToGenerate);
         let statusGekoppeld = false;
@@ -124,7 +126,7 @@ export function generateOvereenkomstData(
         for (let medewerker of medewerkersLtMaxOvk) {
             if (!statusGekoppeld) {
                 /**
-                 * To-Do: 
+                 * TO-DO: 
                  * - flow voor overgangen tussen overeenkomsten met transitie-tabel etc....
                  * - aansluiting van datums tussen meerdere overeenkomsten per medewerker
                  */
