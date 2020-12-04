@@ -30,7 +30,8 @@ export function writeTtlFile(
     
     let ttlFileData = ttlFileTemplate
         .replace('<%= ttlFile %>', ttFile)
-        .replace('<%= author %>', '<https://github.com/onnohaldar/kik-v-demo-tripples>');
+        .replace('<%= author %>', '<https://github.com/onnohaldar/kik-v-demo-tripples>')
+        .replace('<%= creationDate %>', new Date().toUTCString);
 
     console.log(ttlFileData);
     writeFileSync(ttlDestFilePath, ttlFileData);
