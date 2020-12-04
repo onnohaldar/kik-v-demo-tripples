@@ -10,7 +10,7 @@ import { argv } from 'process';
 
 import { generateMedewerkerData } from './generate-medewerker-data';
 import { generateOvereenkomstData } from './generate-overeenkomst-data';
-import { writeKikVTtlFile } from './write-ttl-file';
+import { writeTtlFile } from './write-ttl-file';
 
 interface GeneratorOptions {
     medewerkersToGenerate: number;
@@ -23,4 +23,4 @@ let medewerkers =  generateMedewerkerData({ numberToGenerate: options.medewerker
 
 const overeenkomsten = generateOvereenkomstData(medewerkers, { minToGenerate: 1, maxToGenerate: 3, createDatePastInYears: 2 });
 
-writeKikVTtlFile(medewerkers, overeenkomsten);
+writeTtlFile(medewerkers, overeenkomsten);

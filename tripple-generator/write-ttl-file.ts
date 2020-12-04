@@ -16,7 +16,7 @@ import { OvereenkomstData } from './overeenkomst-data';
 const ttlTemplateFile = 'file.template.ttl';
 const ttFile = 'kik-v-demo-tripples-v01.ttl';
 
-export function writeKikVTtlFile(
+export function writeTtlFile(
     medewerkers: MedewerkerData[],
     overeenkomsten: OvereenkomstData[]
 ) {
