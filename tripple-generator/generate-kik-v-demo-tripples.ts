@@ -13,6 +13,7 @@ import { argv } from 'process';
 
 import { generateKikVMedewerkerData } from './generate-kik-v-medewerker-data';
 import { generateKikVOvereenkomstData } from './generate-kik-v-overeenkomst-data';
+import { writeKikVTripplesFile } from './write-kik-v-tripples-file';
 
 interface GeneratorOptions {
     medewerkersToGenerate: number;
@@ -25,3 +26,4 @@ let medewerkers =  generateKikVMedewerkerData({ numberToGenerate: options.medewe
 
 const overeenkomsten = generateKikVOvereenkomstData(medewerkers, { minToGenerate: 1, maxToGenerate: 3, createDatePastInYears: 2 });
 
+writeKikVTripplesFile(medewerkers, overeenkomsten);
