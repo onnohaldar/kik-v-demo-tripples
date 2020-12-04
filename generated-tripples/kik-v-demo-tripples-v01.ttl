@@ -1,7 +1,7 @@
 #################################################################
 # File: kik-v-demo-tripples-v01.ttl
 # Author: <https://github.com/onnohaldar/kik-v-demo-tripples>
-# Date of creation: Fri, 04 Dec 2020 10:18:15 GMT
+# Date of creation: Fri, 04 Dec 2020 10:37:36 GMT
 # Status: initiele versie ter evaluatie Marc Nieuwland
 #################################################################
 
@@ -18,3 +18,69 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vph: <http://www.zinl.nl/ontologies/VPH-domain-ontology#> .
 @base <http://testdata.zinl.nl/> .
+
+#################################################################
+# KIK-V Demo Medewerkers
+#################################################################
+
+:39f01a91-5e66-532a-857a-f06484e8da89 a vph:Human
+.
+
+:edc94096-e770-5b1c-9419-fbed86c2ae9d a vph:Human
+.
+
+:13a9b927-eaf0-5206-b70a-5993efe68e50 a vph:Human
+.
+
+:37c608b4-bee6-5e32-b7da-5b7515c676da a vph:Human
+.
+
+:e11041c6-364c-5e4d-84e7-4feee71524fe a vph:Human
+.
+
+:f98c7ecf-0277-52cf-9bad-4509792e0c29 a vph:Human
+.
+
+:ba3f9fe5-9d8a-5f29-b0f0-6b29c577c6b0 a vph:Human
+.
+
+:dc8fff1e-9be1-5a2f-b375-34634020d3cc a vph:Human
+.
+
+:ee15d197-0ded-5796-9cf9-13e00caf86b7 a vph:Human
+.
+
+:4dce1a26-6832-5f9a-828e-0a314ecf63a4 a vph:Human
+.
+
+:2b5201f2-ea4b-5ef1-9b75-c60ae3fa52c3 a vph:Human
+.
+
+:c8ba7892-fc3c-5eea-80d4-e7adba4d3e80 a vph:Human
+.
+
+:8e568de6-9db1-5693-876d-396d35dee679 a vph:Human
+.
+
+:8dd4c08b-f45b-5a58-814d-b76909b5577a a vph:Human
+.
+
+:908d862b-2d27-5d01-9d21-3d937a868d24 a vph:Human
+.
+
+:38be7edc-3dfd-5473-b961-5d0731e93d97 a vph:Human
+.
+
+:4d99cb54-10e8-5884-909d-28db0a68f0cd a vph:Human
+.
+
+:d9793ace-ea1d-5296-8cdb-26ec90da07ac a vph:Human
+.
+
+:74b5d71b-bb99-5c41-8bfa-2fe56c4e68d9 a vph:Human
+.
+
+:a9027e20-7e8b-5bc8-a8df-4bfbd836d6dd a vph:Human
+.
+
+

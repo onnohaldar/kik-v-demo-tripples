@@ -17,6 +17,7 @@ const ttlFileTemplateName = 'file.template.ttl';
 const ttlFileSectionTemplateName = 'file-section.template.ttl';
 const ttFile = 'kik-v-demo-tripples-v01.ttl';
 const destFolder = 'generated-tripples';
+const ttlIdent = '  ';
 
 export function writeTtlFile(
     medewerkers: MedewerkerData[],
@@ -39,6 +40,14 @@ export function writeTtlFile(
     let ttlMedewerkerData = '';
     for (const medewerker of medewerkers) {
         ttlMedewerkerData += ':' + medewerker.nodeId + ' a ' + medewerker.rdfType + '\n';
+
+        let kikHasAgreement = '';
+        for (const overeenkomstNodeId of medewerker.overeenkomstNodeIds) {
+            kikHasAgreement +=  ttlIdent + ttlIdent + ':' + overeenkomstNodeId + ',\n';
+        }
+
+
+        ttlMedewerkerData += '.\n\n';
     }
     ttlFileData += ttlFileSectionTemplate
         .replace('<%= ttlFileSection %>', 'KIK-V Demo Medewerkers')
