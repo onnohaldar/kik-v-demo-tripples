@@ -13,17 +13,19 @@ import { join, resolve } from 'path';
 import { MedewerkerData } from './medewerker-data';
 import { OvereenkomstData } from './overeenkomst-data';
 
+const ttlTemplateFile = 'file.template.ttl';
+
 export function writeKikVTtlFile(
     medewerkers: MedewerkerData[],
     overeenkomsten: OvereenkomstData[]
 ) {
-    const tripplesTemplateFile = join(__dirname, 'tripples-file.template.ttl');
-    const tripplesTemplate = readFileSync(tripplesTemplateFile, 'utf-8');
+    const ttlTemplateFilePath = join(__dirname, ttlTemplateFile);
+    const ttlTemplate = readFileSync(ttlTemplateFilePath, 'utf-8');
     
     const destPath = resolve(__dirname, '..', 'generated-tripples');
-    const turtleFile = join(destPath, 'kik-v-demo-tripples-v01.ttl');
+    const ttlDestFilePath = join(destPath, 'kik-v-demo-tripples-v01.ttl');
     
-    let turtleData = tripplesTemplate;
+    let turtleData = ttlTemplate;
 
     console.log(turtleData);
     
