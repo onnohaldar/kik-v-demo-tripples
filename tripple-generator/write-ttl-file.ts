@@ -38,10 +38,11 @@ export function writeTtlFile(
         .replace('<%= status %>', 'initiele versie ter evaluatie Marc Nieuwland');
 
     let ttlMedewerkerData = '';
+
     for (const medewerker of medewerkers) {
         ttlMedewerkerData += ':' + medewerker.nodeId + ' a ' + medewerker.rdfType + '\n';
 
-        let kikvHasAgreementProp = ttlIdent + 'kikv:hasAgreement\n';
+        let kikvHasAgreementProp = ttlIdent + 'kik:hasAgreement\n';
         let memberCount = 0;
         for (const overeenkomstNodeId of medewerker.overeenkomstNodeIds) {
             kikvHasAgreementProp +=  ttlIdent + ttlIdent + ':' + overeenkomstNodeId
@@ -60,6 +61,12 @@ export function writeTtlFile(
         .replace('<%= ttlFileSection %>', 'KIK-V Demo Medewerkers')
         .replace('<%= ttlSectionData %>', ttlMedewerkerData);
 
+    let ttlOvereenkomstData = '';
+
+    for (const overeenkomst of overeenkomsten) {
+        ttlOvereenkomstData += ':' + overeenkomst.nodeId + ' a ' + overeenkomst.rdfType + '\n';
+        ttlOvereenkomstData += ttlIdent + 'kik:startDatum' + overeenkomst.kikStartDatum;
+    }
 
     writeFileSync(ttlDestFilePath, ttlFileData);    
 }

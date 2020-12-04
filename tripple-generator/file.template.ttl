@@ -14,7 +14,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix kikv: <http://www.zinl.nl/ontologies/KIK-V#> .
+@prefix kik: <http://www.zinl.nl/ontologies/KIK-V#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vph: <http://www.zinl.nl/ontologies/VPH-domain-ontology#> .
 @base <http://testdata.zinl.nl/> .
