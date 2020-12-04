@@ -24,6 +24,8 @@ export function writeTtlFile(
 ) {
     const ttlFileTemplatePath = join(__dirname, ttlFileTemplateName);
     const ttlFileTemplate = readFileSync(ttlFileTemplatePath, 'utf-8');
+    const ttlFileSectionTemplatePath = join(__dirname, ttlFileSectionTemplateName);
+    const ttlFileSectionTemplate = readFileSync(ttlFileSectionTemplatePath, 'utf-8');
     
     const destPath = resolve(__dirname, '..', destFolder);
     const ttlDestFilePath = join(destPath, ttFile);
@@ -34,7 +36,12 @@ export function writeTtlFile(
         .replace('<%= creationDate %>', new Date().toUTCString())
         .replace('<%= status %>', 'initiele versie ter evaluatie Marc Nieuwland');
 
-    console.log(ttlFileData);
-    writeFileSync(ttlDestFilePath, ttlFileData);
-    
+    let ttlMedewerkerData = '';
+    for (const medewerker of medewerkers) {
+        ttlMedewerkerData += ':' + medewerker.nodeId + ' a ' + medewerker.rdfType + '\n';
+    }
+
+
+
+    writeFileSync(ttlDestFilePath, ttlFileData);    
 }
